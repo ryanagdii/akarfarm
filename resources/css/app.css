@@ -1,0 +1,400 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css');
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/geist@5.0.0/index.css');
+
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+:root {
+    --akarorange: #fb9609;
+    --akargreen: #16B364;
+    --primary: #FFF7E8;
+    --secondary-green: #A1D9B8; 
+    --bg-light-cream: #F8F4ED;
+    --text-dark: #333333;
+    --card-layer-shadow: 0 10px 30px -5px rgba(25, 181, 92, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+body,
+html {
+    font-family: 'Geist', sans-serif !important;
+    background-color: var(--primary);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.hero-section {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+.hero-section .content {
+    z-index: 2;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar-transparent {
+    background: transparent;
+    transition: all 0.4s ease;
+}
+
+.navbar-scrolled {
+    background: var(--primary);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--akarorange);
+    transition: all 0.4s ease;
+    color: black !important;
+}
+
+/* Logo transisi */
+#navbarLogo {
+    transition: filter 0.3s ease;
+}
+
+/* Link default (saat belum scroll) */
+.nav-link-custom {
+    color: #ffffff !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link-custom:hover {
+    color: var(--akarorange) !important;
+}
+
+.navbar-scrolled .nav-link-custom {
+    color: #000000 !important;
+}
+
+.navbar-scrolled .nav-link-custom:hover {
+    color: var(--akarorange) !important;
+}
+
+/* Tombol */
+.akar-btn {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    transition: all 0.3s;
+}
+
+.dropdown-menu a {
+    color: #000 !important;
+}
+
+.akar-btn-scrolled {
+    border: 1px solid var(--akarorange);
+    color: black !important;
+}
+
+.akar-btn:hover {
+    background-color: #fafafa;
+    color: black !important;
+}
+
+.akar-btn-scrolled:hover {
+    background-color: var(--akarorange);
+    color: white !important;
+}
+
+
+
+/* ---------- HERO SECTION ---------- */
+.hero-section {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* ===== HERO CAPTION CARD ===== */
+.caption-card {
+    background-color: #FFF7E8;
+    color: #16B364;
+    border-radius: 50px;
+    font-size: 1.25rem;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.6s ease;
+}
+
+.hero-caption {
+    z-index: 3;
+    text-align: center;
+}
+
+
+/* ===== SUSTAINABILITY SECTION ===== */
+.sustainability-section {
+    width: 100%;
+    /* Full lebar layar */
+    background-color: var(--primary);
+    padding: 4rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sustainability-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    font-weight: 600;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.sustainability-list li::after {
+    content: "•";
+    margin-left: 1.5rem;
+    color: #fb9609;
+    /* warna oranye akar */
+}
+
+.sustainability-list li:last-child::after {
+    content: "";
+}
+
+
+
+
+/* === PLANTS SECTION === */
+.plants-section {
+    background-color: #FFF7E8;
+
+    display: flex;
+    justify-content: center;
+}
+
+.plants-container {
+    width: 80%;
+    max-width: 1400px;
+}
+
+.plant-item {
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+    /* Hapus border-radius agar kotak full */
+    border-radius: 0;
+}
+
+.plant-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.8s ease;
+}
+
+.plant-item:hover .plant-bg {
+    transform: scale(1.08);
+}
+
+.plant-overlay {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    transition: background 0.5s ease;
+}
+
+.plant-item:hover .plant-overlay {
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.plant-overlay h3 {
+    font-size: 1.5rem;
+    font-family: 'Geist', sans-serif;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.plant-overlay p {
+    font-size: 1rem;
+    font-weight: 300;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.plant-overlay a {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: none;
+    border-bottom: 1px solid white;
+    border-radius: 0;
+    background: transparent;
+}
+
+.plant-overlay a:hover {
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* ---------- WHY SECTION ---------- */
+.why-section {
+    background-color: var(--primary);
+    font-family: 'Geist', sans-serif;
+    width: 100%;
+}
+
+.why-text h6 {
+    letter-spacing: 1px;
+    color: #7a7a7a;
+}
+
+.why-text h2 {
+    color: #1f1f1f;
+    font-weight: 700;
+}
+
+.why-list li {
+    display: flex;
+    align-items: center;
+    font-size: 1.05rem;
+    margin-bottom: 0.8rem;
+    color: #333;
+}
+
+.why-list i {
+    color: var(--akargreen, #3FA047);
+    font-size: 1.3rem;
+}
+
+.why-image img {
+    max-width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.why-image img:hover {
+    transform: scale(1.03);
+}
+
+.about-section {
+    background: var(--primary);
+    color: #222;
+}
+
+.about-section .container {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 80px 20px;
+}
+
+.about-text h6 {
+    color: var(--akargreen);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    line-height: 1.4;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.about-image img {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+}
+
+.about-section {
+    background-color: #FFF7E8;
+}
+
+.carousel-controls .carousel-control-prev-icon,
+.carousel-controls .carousel-control-next-icon {
+    background-size: 60%;
+    filter: invert(1);
+    /* Biar ikon jadi hitam di background terang */
+}
+
+.carousel-controls button {
+    border: none;
+    background: none;
+    /* Menggunakan sedikit margin horizontal, bisa disesuaikan */
+    margin: 0px auto;
+    /* Ubah nilai ini untuk mengatur jarak */
+    transition: transform 0.3s ease;
+}
+
+.carousel-controls button:hover {
+    transform: scale(1.1);
+}
+
+.produk-card {
+    background-color: var(--akargreen);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produk-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
