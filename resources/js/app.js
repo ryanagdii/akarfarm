@@ -2,6 +2,14 @@ import 'bootstrap';
 import '../css/app.css';
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({
+        once: true,            // animasi hanya terjadi sekali
+        duration: 1000,         // durasi animasi (ms)
+        easing: 'ease-in-out', // efek transisi halus
+        offset: 100,           // jarak sebelum animasi mulai (px)
+    });
+});
 
 // Navbar scroll effect
 window.addEventListener("scroll", function () {
@@ -21,31 +29,106 @@ window.addEventListener("scroll", function () {
   });
 
 // LAZY LOAD IMAGES & VIDEO
-document.addEventListener("DOMContentLoaded", () => {
-    const lazyMedia = document.querySelectorAll("img.lazy-img, video.lazy-video");
+// document.addEventListener("DOMContentLoaded", () => {
+//     const lazyMedia = document.querySelectorAll("img.lazy-img, video.lazy-video");
 
-    const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const el = entry.target;
-                const src = el.getAttribute("data-src");
-                if (src) {
-                    if (el.tagName === "VIDEO") {
-                        el.src = src;
-                        el.load();
-                        el.play().catch(() => {});
-                    } else {
-                        el.src = src;
-                    }
-                    el.removeAttribute("data-src");
+//     const observer = new IntersectionObserver((entries, obs) => {
+//         entries.forEach(entry => {
+//             if (entry.isIntersecting) {
+//                 const el = entry.target;
+//                 const src = el.getAttribute("data-src");
+//                 if (src) {
+//                     if (el.tagName === "VIDEO") {
+//                         el.src = src;
+//                         el.load();
+//                         el.play().catch(() => {});
+//                     } else {
+//                         el.src = src;
+//                     }
+//                     el.removeAttribute("data-src");
+//                 }
+//                 obs.unobserve(el);
+//             }
+//         });
+//     });
+
+//     lazyMedia.forEach(el => observer.observe(el));
+// });
+
+// Lazy load gambar & background v2
+        // document.addEventListener("DOMContentLoaded", function () {
+        //     const lazyImages = document.querySelectorAll("img.lazyload");
+        //     const lazyBackgrounds = document.querySelectorAll(".lazyload[data-bg]");
+        //     const lazyVideos = document.querySelectorAll("video.lazyload");
+
+        //     const observer = new IntersectionObserver((entries, obs) => {
+        //         entries.forEach(entry => {
+        //             if (entry.isIntersecting) {
+        //                 const el = entry.target;
+        //                 if (el.tagName === "IMG") {
+        //                     el.src = el.dataset.src;
+        //                 } else if (el.tagName === "VIDEO") {
+        //                     el.src = el.dataset.src;
+        //                 } else if (el.dataset.bg) {
+        //                     el.style.backgroundImage = `url('${el.dataset.bg}')`;
+        //                 }
+        //                 el.classList.remove("lazyload");
+        //                 obs.unobserve(el);
+        //             }
+        //         });
+        //     });
+
+        //     [...lazyImages, ...lazyBackgrounds, ...lazyVideos].forEach(el => observer.observe(el));
+        // });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const lazyImages = document.querySelectorAll("img.lazyload");
+            const lazyBackgrounds = document.querySelectorAll(".lazyload[data-bg]");
+            const lazyVideos = document.querySelectorAll("video.lazyload");
+        
+            const loadElement = (el) => {
+                if (el.tagName === "IMG" && el.dataset.src) {
+                    el.src = el.dataset.src;
+                } else if (el.tagName === "VIDEO" && el.dataset.src) {
+                    el.src = el.dataset.src;
+                } else if (el.dataset.bg) {
+                    el.style.backgroundImage = `url('${el.dataset.bg}')`;
                 }
-                obs.unobserve(el);
-            }
+                el.classList.remove("lazyload");
+            };
+        
+            // --- 1️⃣ Load gambar penting lebih dulu (misal yang di carousel pertama)
+            lazyImages.forEach((img, i) => {
+                if (i === 0 || img.closest("#aboutCarousel")) {
+                    // preload hanya carousel pertama
+                    loadElement(img);
+                }
+            });
+        
+            // --- 2️⃣ IntersectionObserver untuk gambar lain
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        loadElement(entry.target);
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, {
+                rootMargin: "200px 0px", // mulai load sebelum kelihatan di layar
+                threshold: 0.01
+            });
+        
+            [...lazyImages, ...lazyBackgrounds, ...lazyVideos].forEach(el => observer.observe(el));
+        
+            // --- 3️⃣ Pastikan semua lazy image yang belum sempat muncul tetap di-load setelah page siap
+            window.addEventListener("load", () => {
+                setTimeout(() => {
+                    [...lazyImages, ...lazyBackgrounds, ...lazyVideos].forEach(el => {
+                        if (el.classList.contains("lazyload")) loadElement(el);
+                    });
+                }, 800); // tunda sedikit agar tidak ganggu render awal
+            });
         });
-    });
-
-    lazyMedia.forEach(el => observer.observe(el));
-});
 
 // 🌿 Smooth horizontal drag scroll for plants
 document.addEventListener("DOMContentLoaded", () => {
@@ -103,4 +186,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 2500);
     }
 });
+
 
