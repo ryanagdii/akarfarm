@@ -22,7 +22,7 @@
 :root {
     --akarorange: #fb9609;
     --akarorange-light: #fac06f;
-    --akargreen: #16B364;
+    --akargreen: #198754;
     --akargreenlight: #25ec89;
     --primary: #FFF7E8;
     --secondary-green: #A1D9B8; 
@@ -74,12 +74,14 @@ html {
 .navbar-transparent {
     background: transparent;
     transition: all 0.4s ease;
+    border-bottom: 1px solid white;
+    padding: 10px 0px;
 }
 
 .navbar-scrolled {
     background: var(--primary);
     backdrop-filter: blur(10px);
-    border-bottom: 2px solid var(--akarorange);
+    border-bottom: 1px solid black;
     transition: all 0.4s ease;
     color: black !important;
 }
@@ -92,12 +94,13 @@ html {
 /* Link default (saat belum scroll) */
 .nav-link-custom {
     color: #ffffff !important;
-    font-weight: 500;
+    font-weight: 100;
     transition: color 0.3s ease;
+    font-size: 0.8rem;
 }
 
 .nav-link-custom:hover {
-    color: var(--akarorange) !important;
+    color: var(--akargreen) !important;
 }
 
 .navbar-scrolled .nav-link-custom {
@@ -105,12 +108,14 @@ html {
 }
 
 .navbar-scrolled .nav-link-custom:hover {
-    color: var(--akarorange) !important;
+    color: var(--akargreen) !important;
 }
 
 /* Tombol */
 .akar-btn {
+    font-family: 'Geist', sans-serif !important;
     background-color: transparent;
+    font-size: 0.8rem;
     border: 1px solid white;
     color: white;
     transition: all 0.3s;
@@ -121,21 +126,21 @@ html {
 }
 .dropdown-menu a:hover {
     color: #ffffff !important;
-    background-color: var(--akarorange);
+    background-color: var(--akargreen);
 }
 
 .akar-btn-scrolled {
-    border: 1px solid var(--akarorange);
+    border: 1px solid var(--akargreen);
     color: black !important;
 }
 
 .akar-btn:hover {
-    background-color: #fafafa;
+    background-color: var(--akargreen);
     color: black !important;
 }
 
 .akar-btn-scrolled:hover {
-    background-color: var(--akarorange);
+    background-color: var(--akargreen);
     color: white !important;
 }
 
@@ -188,9 +193,8 @@ html {
 /* ===== SUSTAINABILITY SECTION ===== */
 .sustainability-section {
     width: 100%;
-    /* Full lebar layar */
     background-color: var(--primary);
-    padding: 4rem 0;
+    padding: 3rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -212,8 +216,7 @@ html {
 .sustainability-list li::after {
     content: "•";
     margin-left: 1.5rem;
-    color: #fb9609;
-    /* warna oranye akar */
+    color: var(--akargreen);
 }
 
 .sustainability-list li:last-child::after {
@@ -226,7 +229,6 @@ html {
 /* === PLANTS SECTION === */
 .plants-section {
     background-color: #FFF7E8;
-
     display: flex;
     justify-content: center;
 }
@@ -298,7 +300,8 @@ html {
 
 /* ---------- WHY SECTION ---------- */
 .why-section {
-    width: 80%;
+    width: 83%;
+    padding: 0 0;
     font-family: 'Geist', sans-serif;
     overflow: hidden;
     display: flex;
@@ -333,7 +336,7 @@ html {
 }
 
 .why-list i {
-    color: var(--akargreen, #3FA047);
+    color: var(--akargreen);
     font-size: 1.3rem;
 }
 
@@ -395,6 +398,71 @@ html {
     background-color: #FFF7E8;
 }
 
+/* ======= */
+.tentang-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding: 60px 5%;
+  }
+  
+  .tentang-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+  }
+  
+  .tentang-row.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .tentang-image img {
+    width: 100%;
+    max-width: 600px;
+    object-fit: cover;
+  }
+  
+  .tentang-text {
+    flex: 1;
+  }
+  
+  .tentang-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  .tentang-text ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .tentang-text ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  
+  .tentang-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 768px) {
+    .tentang-row,
+    .tentang-row.reverse {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .tentang-image img {
+      max-width: 100%;
+    }
+  }
+  
+
 .carousel-controls .carousel-control-prev-icon,
 .carousel-controls .carousel-control-next-icon {
     background-size: 60%;
@@ -415,105 +483,49 @@ html {
     transform: scale(1.1);
 }
 
-.produk-section .card {
-    transition: all 0.35s ease;
-    transform: translateY(0);
-    background: var(--akargreen);
-}
+/* after tentang */
 
-.produk-section .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
-}
-
-/* Tombol animasi */
-.produk-section .btn {
-    transition: all 0.25s ease;
-}
-
-.produk-section .btn:hover {
-    background-color: var(--akarorange) !important; /* Warna hijau muda */
-    color: #fff !important;
-    transform: scale(1.05);
-}
-
-/* Tambahan halus untuk ikon checklist */
-.produk-section .bi-check2 {
-    transition: transform 0.25s ease;
-}
-
-.produk-section .card:hover .bi-check2 {
-    transform: scale(1.2);
-}
-
-.produk-section .bi-check2 {
-    color: #fff;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    padding: 2px;
-    margin-right: 8px;
-}
-.produk-section .card h2 {
-    font-size: 2rem;
-}
-.produk-section .card ul li {
-    font-size: 0.95rem;
-}
-.produk-section .btn {
-    transition: all 0.2s ease;
-}
-.produk-section .btn:hover {
-    background-color: #e6e6e6;
-}
-
-.footer-section {
+.aftertentang-section {
     background-color: var(--akargreen);
+    font-family: 'Geist', sans-serif;
+    width: 100%;
+    padding: 60px 40px; /* Tambah padding agar isi tidak terlalu mepet */
 }
 
-.footer-section .email-input {
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid white;
-    color: white;
-    width: 220px;
+.aftertentang-text {
+    padding: 0 20px; /* Jarak antara teks dan gambar */
 }
 
-.footer-section .email-input::placeholder {
-    color: rgba(255, 255, 255, 0.8);
+.aftertentang-image img {
+    max-width: 80%; /* perkecil sedikit gambar agar ada ruang */
+    height: 380px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
 }
 
-.footer-section .email-input:focus {
-    box-shadow: none;
-    border-color: white;
+.aftertentang-image img:hover {
+    transform: scale(1.03);
 }
 
-.footer-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, auto); /* 2 kolom */
-    grid-auto-rows: auto;
-    column-gap: 40px; /* jarak antar kolom */
-    row-gap: 8px;    /* jarak antar baris */
-    justify-content: center; /* biar di tengah */
-  }
-  
-  .footer-links li {
-    text-align: left; /* biar rapi ke kiri di tiap kolom */
-  }
-  
-  .footer-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: opacity 0.3s ease;
-  }
-  
-  .footer-links a:hover {
-    opacity: 0.8;
-  }
-  
+/* Responsif */
+@media (max-width: 992px) {
+    .aftertentang-section {
+        width: 95%;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .aftertentang-image img {
+        max-width: 100%;
+        height: 300px;
+        margin: 1rem 0;
+    }
+
+    .aftertentang-text {
+        padding: 0;
+    }
+}
+
 
 .store-badge {
     height: auto;
@@ -623,3 +635,53 @@ html {
     transform: translateX(-50%);
   }
 }
+
+
+.footer-section {
+    background-color: var(--akargreen);
+}
+
+.footer-section .email-input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    width: 175px;
+}
+
+.footer-section .email-input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-section .email-input:focus {
+    box-shadow: none;
+    border-color: white;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, auto); /* 2 kolom */
+    grid-auto-rows: auto;
+    column-gap: 40px; /* jarak antar kolom */
+    row-gap: 8px;    /* jarak antar baris */
+    justify-content: center; /* biar di tengah */
+  }
+  
+  .footer-links li {
+    text-align: left; /* biar rapi ke kiri di tiap kolom */
+  }
+  
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: opacity 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    opacity: 0.8;
+  }
+  
