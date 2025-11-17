@@ -25,18 +25,19 @@
   --accent-color: #F7C752; /* Kuning Mentega/Oranye Hangat, untuk tombol & highlight (CTA) */
   --accentdark-color: #b8953d; /* Kuning Mentega/Oranye Hangat, untuk tombol & highlight (CTA) */
   --surface-color: #A3B86D; /* Hijau Earthy/Zaitun Muda, digunakan sebagai background untuk cards atau elemen kotak */
-  --surfacedark-color: #49a74c; /* Hijau Earthy/Zaitun Muda, digunakan sebagai background untuk cards atau elemen kotak */
+  --surfacedark-color: #739e06; /* Hijau Earthy/Zaitun Muda, digunakan sebagai background untuk cards atau elemen kotak */
   --contrast-color: #ffffff; /* Putih, untuk teks agar terbaca jelas di atas warna aksen (kuning/hijau) */
 }
 
 /* Nav Menu Colors - Disesuaikan dengan Palet Melon */
 :root {
   --nav-color: #312E27; /* Warna teks nav default (Cokelat Tua) */
-  --nav-hover-color: #A3B86D; /* Applied to main navmenu links when they are hovered over or active (Hijau Earthy) */
+  --nav-hover-color: #739e06; /* Applied to main navmenu links when they are hovered over or active (Hijau Earthy) */
   --nav-mobile-background-color: #ffffff; /* Background mobile nav (Krem Pucat) */
   --nav-dropdown-background-color: #ffffff; /* Background dropdown (Krem Pucat) */
   --nav-dropdown-color: #312E27; /* Teks dropdown (Cokelat Tua) */
-  --nav-dropdown-hover-color: #A3B86D; /* Hover dropdown (Hijau Earthy) */
+  --nav-dropdown-hover-color: #739e06; /* Hover dropdown (Hijau Earthy) */
+  --nav-contrast-color: #ffffff;
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -257,7 +258,7 @@ h6 {
     top: 130%;
     opacity: 0;
     transition: 0.3s;
-    border-radius: 4px;
+    border-radius: 10px;
     z-index: 99;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
   }
@@ -280,7 +281,9 @@ h6 {
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
   .navmenu .dropdown ul li:hover>a {
-    color: var(--nav-dropdown-hover-color);
+    color: var(--nav-contrast-color);
+    background-color: var(--surface-color);
+    border-radius: 10px;
   }
 
   .navmenu .dropdown:hover>ul {
@@ -583,7 +586,7 @@ h6 {
   margin-top: 20px;
   margin-bottom: 10px;
   padding: 8px 0;
-  width: 80%;
+  width: 70%; /* <- lebar fixed */
   display: flex;
   align-items: center;
   border-bottom: 1px solid var(--contrast-color);
@@ -591,13 +594,19 @@ h6 {
   background: transparent;
 }
 
+.footer .footer-newsletter .store-wrapper {
+  width: 70%; /* <- samakan dengan newsletter-form */
+  display: flex;
+  justify-content: space-between; /* kiri & kanan */
+}
+
 .footer .footer-newsletter .newsletter-form:focus-within {
-  border-bottom-color: var(--accent-color);
+  border-bottom-color: var(--contrast-color);
 }
 
 .footer .footer-newsletter .newsletter-form .email-input {
   background: transparent !important;
-  border: 1px solid var(--accent-color) !important;
+  border: 1px solid var(--contrast-color) !important;
   border-radius: 10px;
   color: var(--contrast-color);
   font-size: 15px;
@@ -672,38 +681,50 @@ h6 {
   transition: all 0.6s ease-out;
   width: 100%;
   height: 100vh;
+
+  /* Gambar favicon sebagai loader center */
+  background-image: url("/akar/assets/img/favicon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70px;
 }
 
+/* Lingkaran animasi */
 #preloader:before,
 #preloader:after {
   content: "";
   position: absolute;
-  border: 4px solid var(--accent-color);
+  border: 3px solid var(--accent-color);
   border-radius: 50%;
-  animation: animate-preloader 2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  animation: animate-ring 1.8s ease-out infinite;
 }
 
 #preloader:after {
-  animation-delay: -0.5s;
+  animation-delay: -0.7s;
 }
 
-@keyframes animate-preloader {
+/* Animasi ring - dimulai dari LUAR favicon */
+@keyframes animate-ring {
+
+  /* Ring mulai dari ukuran lebih besar dari favicon (tidak overlap) */
   0% {
-    width: 10px;
-    height: 10px;
-    top: calc(50% - 5px);
-    left: calc(50% - 5px);
-    opacity: 1;
+    width: 90px;
+    height: 90px;
+    top: calc(50% - 45px);  /* half of 90px */
+    left: calc(50% - 45px);
+    opacity: 0.9;
   }
 
+  /* Ring membesar jauh sampai fade */
   100% {
-    width: 72px;
-    height: 72px;
-    top: calc(50% - 36px);
-    left: calc(50% - 36px);
+    width: 160px;
+    height: 160px;
+    top: calc(50% - 80px); /* half of 160px */
+    left: calc(50% - 80px);
     opacity: 0;
   }
 }
+
 
 /*--------------------------------------------------------------
 # Scroll Top Button
@@ -1133,9 +1154,62 @@ section,
   margin-left: 10px;
 }
 
-.about .about-images img {
-  border-radius: 10px;
+/* Wrapper utama: kiri & kanan sejajar */
+/* ukuran kotak (sesuaikan) */
+
+/* Agar kolom gambar sejajar vertikal dengan kolom teks */
+.about .about-images {
+  display: flex;
+  align-items: center;       /* center vertical */
+  justify-content: center;   /* center horizontal */
 }
+
+/* Pastikan row internal tidak mepet ke atas */
+.about .about-images .row {
+  width: 100%;
+}
+
+.about-images .img-wrap {
+  width: 100%;        /* lebar kotak kanan; untuk responsive bisa ubah di media queries */
+  height: auto;       /* tinggi kotak (square) */
+  overflow: hidden;    /* penting: memotong gambar yang di-zoom */
+  border-radius: 12px;
+  display: block;
+}
+
+/* untuk tampilan kiri yang center vertically - bila kamu ingin kiri lebih besar,
+   beri ukuran berbeda untuk .left-image .img-wrap */
+.about-images .left-image .img-wrap {
+  width: 100%;    /* samakan agar proporsional dengan kanan. Ubah kalau mau lebih besar */
+  height: auto;
+}
+
+/* Gambar berada penuh di dalam wrapper */
+.about-images .img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  transform-origin: center center;
+  display: block;
+}
+
+/* Hanya gambar yang nge-zoom, kotaknya tetap */
+.about-images .img-wrap:hover img {
+  transform: scale(1.1);
+}
+
+/* Responsive: buat kotak lebih kecil di mobile */
+@media (max-width: 767px) {
+  .about-images .img-wrap,
+  .about-images .left-image .img-wrap {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1; /* jaga square */
+  }
+}
+
+
 
 /*--------------------------------------------------------------
 # Clients Section
@@ -1391,6 +1465,14 @@ section,
 
 .features-details .features-item img {
   border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+  transform-origin: center;
+}
+
+/* Hover zoom */
+.features-details .features-item img:hover {
+  transform: scale(1.04); /* zoom sedikit */
 }
 
 
@@ -1496,9 +1578,19 @@ section,
 /*--------------------------------------------------------------
 # More Features Section
 --------------------------------------------------------------*/
+.more-features {
+  background-color: color-mix(in srgb, var(--surface-color), transparent 80%);
+  max-width: 86%;      /* batas lebar agar tidak full */
+  margin: 0 auto;         /* membuatnya center */
+  border-radius: 10px;    /* opsional, biar lebih elegan */
+  padding: 40px 30px;     /* opsional, biar kontennya rapi */
+}
+
 .more-features .features-image {
   position: relative;
   min-height: 400px;
+  overflow: hidden;
+  border-radius: 20px; /* supaya ikut bentuk rounded */
 }
 
 .more-features .features-image img {
@@ -1509,6 +1601,11 @@ section,
   height: 100%;
   object-fit: cover;
   z-index: 1;
+  transition: transform 0.5s ease;
+
+}
+.more-features .features-image img:hover {
+  transform: scale(1.08); /* zoom 8% */
 }
 
 .more-features h3 {

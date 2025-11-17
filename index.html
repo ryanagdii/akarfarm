@@ -51,7 +51,7 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html#hero" class="active">Home</a></li>
+          <li><a href="#hero" class="active">Home</a></li>
           <li class="dropdown"><a href="#"><span>Our Fruits</span> <i
                 class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
@@ -138,23 +138,30 @@
           </div>
 
           <div class="col-lg-6 about-images" data-aos="fade-up" data-aos-delay="200">
-            <div class="row gy-4">
-              <div class="col-lg-6">
-                <img src="assets/img/about1.jpg" class="img-fluid" alt="">
+            <div class="row gy-4 align-items-center">
+              <div class="col-lg-6 left-image">
+                <div class="img-wrap">
+                  <img src="assets/img/about1.png" class="img-fluid" alt="">
+                </div>
               </div>
+          
               <div class="col-lg-6">
                 <div class="row gy-4">
                   <div class="col-lg-12">
-                    <img src="assets/img/about2.jpg" class="img-fluid" alt="">
+                    <div class="img-wrap">
+                      <img src="assets/img/about2.png" class="img-fluid" alt="">
+                    </div>
                   </div>
                   <div class="col-lg-12">
-                    <img src="assets/img/about3.jpg" class="img-fluid" alt="">
+                    <div class="img-wrap">
+                      <img src="assets/img/about3.png" class="img-fluid" alt="">
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-
           </div>
+          
 
         </div>
 
@@ -240,10 +247,66 @@
           </div>
 
         </div><!-- Features Item -->
-        <a href="#" class="btn more-btn" data-aos="fade-up" data-aos-delay="200">Load More</a>
+        <a href="#" class="btn more-btn mb-5" data-aos="fade-up" data-aos-delay="200">Load More</a>
       </div>
 
     </section><!-- /Features Details Section -->
+
+    <!-- More Features Section -->
+<section id="more-features" class="more-features section">
+
+  <div class="container">
+
+    <div class="row justify-content-around gy-4">
+
+      <div class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1" data-aos="fade-left"
+        data-aos-delay="100">
+        <h3>Keuntungan Dari Modular Farming</h3>
+        <p style="text-align: justify;">Sistem pertanian modern berbasis modul (unit produksi) yang dapat diatur, diperluas, dan dipindahkan sesuai kebutuhan. Teknologi ini memudahkan budidaya tanaman di berbagai lokasi, bahkan di area yang sebelumnya tidak cocok untuk bertani.</p>
+
+        <div class="row">
+
+          <div class="col-lg-6 icon-box d-flex">
+            <i class="bi bi-activity flex-shrink-0"></i>
+            <div>
+              <h4>Pemantauan Semi-Otomatis Melalui Teknologi Tinggi</h4>            
+            </div>
+          </div><!-- End Icon Box -->
+
+          <div class="col-lg-6 icon-box d-flex">
+            <i class="bi bi-award flex-shrink-0"></i>
+            <div>
+              <h4>Produksi Sayuran Berkualitas Tinggi dan Konsisten</h4>
+            </div>
+          </div><!-- End Icon Box -->
+
+          <div class="col-lg-6 icon-box d-flex">
+            <i class="bi bi-droplet-half flex-shrink-0"></i>
+            <div>
+              <h4>Hemat Air dan Nutrisi</h4>
+            </div>
+          </div><!-- End Icon Box -->
+
+          <div class="col-lg-6 icon-box d-flex">
+            <i class="bi bi-shield-check flex-shrink-0"></i>
+            <div>
+              <h4>Panen Lebih Cepat, Minim Risiko Cuaca dan Hama</h4>
+            </div>
+          </div><!-- End Icon Box -->
+
+        </div>
+
+      </div>
+
+      <div class="features-image col-lg-5 order-1 order-lg-2" data-aos="fade-right" data-aos-delay="200">
+        <img src="assets/img/tentangakar.png" alt="" class="img-fluid rounded-2">
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- /More Features Section -->
 
 
 
@@ -251,7 +314,6 @@
     <section id="clients" class="clients section">
       
       <div class="container">
-        <h6 class="partners-title text-center mb-4">Partners & Collaborations</h6>
 
         <div class="logo-carousel-wrapper">
     
@@ -337,14 +399,21 @@
 
         <div class="col-lg-4 col-md-12 footer-newsletter">
           <form action="forms/newsletter.php" method="post" class="php-email-form">
-            <div class="newsletter-form"><div class="d-inline-flex align-items-center mb-3">
-              <input type="email" class="form-control form-control-sm email-input"
-                  placeholder="info@akarfarm.com" />
-              <button class="btn btn-light mx-2">Get Started</button>
-          </div></div>
-          <div class="mt-3">
-            <img src="assets/img/appstore.png" alt="App Store" class="me-2" style="height:40px;">
+            <div class="newsletter-form">
+              <div class="d-inline-flex align-items-center mb-3">
+                <input type="email" class="form-control form-control-sm email-input"
+                    placeholder="info@akarfarm.com" />
+                <button class="btn btn-light mx-2">Get Started</button>
+              </div>
+            </div>
+          </form>
+        
+          <!-- WRAPPER BARU AGAR RATA KIRI KANAN -->
+          <div class="store-wrapper mt-3">
+            <img src="assets/img/appstore.png" alt="App Store" style="height:40px;">
             <img src="assets/img/googleplay.png" alt="Google Play" style="height:40px;">
+          </div>
+        
         </div>
           </form>
         </div>
