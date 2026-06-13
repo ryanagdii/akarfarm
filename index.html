@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
   <meta charset="utf-8">
@@ -18,7 +18,6 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/@fontsource/geist@5.0.0/index.css'" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,6 +25,7 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -39,102 +39,160 @@
   ======================================================== -->
 </head>
 
-<body class="index-page">
+<body class="index-page" id="heroMain">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <img src="assets/img/logohitam.png" alt="">
-        <h1 class="sitename"></h1>
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li class="dropdown"><a href="#"><span>Our Fruits</span> <i
-                class="bi bi-chevron-down toggle-dropdown"></i></a>
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+  
+      <nav id="navmenu" class="navmenu d-flex align-items-center">
+        <ul class="nav">
+          <li><a href="index.html" class="active">Beranda</a></li>
+  
+          <li class="dropdown nav-item">
+            <a href="#"><span>Buah Kami</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="#">Melon 1</a></li>
-              <li><a href="#">Melon 2</a></li>
-              <li><a href="#">Melon 3</a></li>
-              <li><a href="#">Melon 4</a></li>
-              <li><a href="#">Melon 5</a></li>
-              <li><a href="#">Melon 6</a></li>
-              <li><a href="#">Melon 7</a></li>
-              <li><a href="#">Melon 8</a></li>
+              <li><a href="melon.html" class="nav-link">Melon</a></li>
+              <li><a href="stroberi.html" class="nav-link">Stroberi</a></li>
             </ul>
           </li>
-          <li class="dropdown"><a href="#"><span>Learn</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+  
+          <li class="dropdown nav-item">
+            <a href="#"><span>Pelajari</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Sustainability</a></li>
-              <li><a href="#">Press Kit</a></li>
+              <li><a href="about.html">Tentang Kami</a></li>
+              <li><a href="sustain.html">Keberlanjutan</a></li>
+              <li><a href="presskit.html">Pers Kit</a></li>
+              <li><a href="careers.html">Karir</a></li>
+              <li><a href="blog.html">Blog</a></li>
             </ul>
           </li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+  
+          <li class="d-xl-none mt-3 px-3 w-100">
+            <div class="d-flex flex-column gap-3 align-items-start">
+              
+              <a class="btn-getstarted w-100 text-center" href="contact.html">Kontak Kami!</a>
+              
+              <div class="gtranslate_wrapper"></div>
+              
+            </div>
+          </li>
+          </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list ms-2"></i>
       </nav>
-
-      <a class="btn-getstarted" href="index.html#about">Contact Us!</a>
-
+  
+      <a href="index.html" class="logo logo-center d-flex align-items-center" id="navbarLogo">
+        <img src="assets/img/logo2.png" alt="Logo">
+      </a>
+  
+      <div class="header-actions d-none d-xl-flex align-items-center gap-2">
+        <div class="gtranslate_wrapper mt-1"></div>
+        <a class="btn-getstarted" href="contact.html">Kontak Kami!</a>
+      </div>
+  
     </div>
   </header>
+
+
+
 
   <main class="main">
 
     <!-- Hero Section -->
     <section id="hero" class="hero section">
       <div class="hero-bg">
-        <img src="assets/img/bg2.png" alt="" data-aos="fade-zoom-in"
-        data-aos-easing="ease-in-sine"
-        data-aos-delay="100"
-        data-aos-offset="0">
-      </div>
-      <div class="container text-center">
-        <div class="d-flex flex-column justify-content-center align-items-center">
-          <h1 data-aos="fade-up">Grow Anywhere, <span style="color:#80a523;">Anytime</span>.</h1>
-          <p data-aos="fade-up" data-aos-delay="100">Solusi Pangan, Bisnis, Energi Terbarukan, dan Kualitas Hidup
-            Untukmu<br></p>
-          <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-            <a href="#about" class="btn-get-started">Get Started</a>
-          </div>
+        <div class="overlay">
+          <video id="bgVideo" class="video-bg" muted loop playsinline preload="none" data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-sine" data-aos-delay="100" data-aos-offset="0">
+            <source data-src="assets/img/vidbg2.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
-
+    
+      <div class="container">
+        
+        <div class="d-flex flex-column">
+          
+          <div class="col-lg-8"> 
+            <h1 data-aos="fade-up">Menanam Kebahagiaan di Setiap Gigitan</h1>
+            <p data-aos="fade-up" data-aos-delay="100">Segar, sehat, dan penuh kebaikan setiap hari.<br></p>
+            
+            <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+              <a href="#about" class="btn-get-started">Jelajahi Sekarang</a>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    
     </section><!-- /Hero Section -->
 
-    <!-- Featured Services Section -->
-    <section id="featured-services" class="featured-services section light-background" data-aos="fade-up" data-aos-delay="100">
+    <section id="featured-services" class="featured-services section light-background" data-aos="fade-zoom-in"
+      data-aos-easing="ease-in-sine" data-aos-delay="100" data-aos-offset="0">
       <div class="container">
 
-        <ul class="featured-inline list-unstyled">
-          <li>Bebas Pestisida</li>
-          <li>Pertanian Ramah Lingkungan</li>
-          <li>Hemat Energi</li>
-          <li>Produksi Sayuran Berkualitas Tinggi</li>
-        </ul>
+        <div class="featured-wrapper">
+          <ul class="featured-track">
+            <li>Bebas Pestisida</li>
+            <i class="bi bi-dot dot"></i>
+            <li>Pertanian Ramah Lingkungan</li>
+            <i class="bi bi-dot dot"></i>
+            <li>Hemat Energi</li>
+            <i class="bi bi-dot dot"></i>
+            <li>Produksi Sayuran Berkualitas Tinggi</li>
+            <i class="bi bi-dot dot"></i>
+            <li>Non-GMO</li>
+            <i class="bi bi-dot dot"></i>
+
+            <!-- duplikasi untuk looping -->
+            <li>Bebas Pestisida</li>
+            <i class="bi bi-dot dot"></i>
+            <li>Pertanian Ramah Lingkungan</li>
+            <i class="bi bi-dot dot"></i>
+            <li>Hemat Energi</li>
+            <i class="bi bi-dot dot"></i>
+            <li>Produksi Sayuran Berkualitas Tinggi</li>
+            <i class="bi bi-dot dot"></i>
+            <li>Non-GMO</li>
+            <i class="bi bi-dot dot"></i>
+          </ul>
+        </div>
 
       </div>
     </section>
 
+    <section id="map-section" class="map-section section" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine"
+      data-aos-delay="100" data-aos-offset="0">
+      <div class="container text-center">
+        <h2 class="fw-bold">Jangkauan AkarFarm di Indonesia</h2>
+        <p>Lokasi operasional & titik pengembangan</p>
+      </div>
+
+      <!-- Elemen Map Leaflet -->
+      <div class="container">
+        <div id="mapid"></div>
+      </div>
+    </section>
+
+
+
+
 
     <!-- About Section -->
-    <section id="about" class="about section mt-5 mb-5">
+    <section id="about" class="about section mb-5">
 
       <div class="container">
 
         <div class="row gy-4">
 
-          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-5 content align-items-center mx-auto me-auto" data-aos="fade-up" data-aos-delay="100">
             <p class="who-we-are">Akar Farm</p>
             <h3>Kami Menanam dengan Prinsip Keberlanjutan</h3>
             <ul>
               <li><i class="bi bi-check-circle"></i> <span>Hiperlokal dan terdesentralisasi</span></li>
               <li><i class="bi bi-check-circle"></i> <span>85% Hemat air, energi dan ruang</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>100+ Varian Sayuran</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>100+ Varian Tanaman</span></li>
             </ul>
-            <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+            <a href="#" class="read-more">Baca Selengkapnya<i class="bi bi-arrow-right"></i></a>
           </div>
 
           <div class="col-lg-6 about-images" data-aos="fade-up" data-aos-delay="200">
@@ -144,24 +202,24 @@
                   <img src="assets/img/about1.png" class="img-fluid" alt="">
                 </div>
               </div>
-          
+
               <div class="col-lg-6">
                 <div class="row gy-4">
                   <div class="col-lg-12">
                     <div class="img-wrap">
-                      <img src="assets/img/about2.png" class="img-fluid" alt="">
+                      <img src="assets/img/about2.jpg" class="img-fluid" alt="">
                     </div>
                   </div>
                   <div class="col-lg-12">
                     <div class="img-wrap">
-                      <img src="assets/img/about3.png" class="img-fluid" alt="">
+                      <img src="assets/img/about3.jpg" class="img-fluid" alt="">
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          
+
 
         </div>
 
@@ -169,185 +227,306 @@
     </section><!-- /About Section -->
 
     <!-- Features Details Section -->
-    <section id="features-details" class="features-details section">
+    <section id="products" class="features-details section mb-5">
 
       <div class="container">
-
-        <div class="row gy-2 justify-content-between features-item">
-
-          <div class="col-lg-5 d-flex align-items-center order-2 order-lg-1" data-aos="fade-right" data-aos-delay="100">
-
-            <div class="content">
-              <h3>Sky Rocket / Sky Blue</h3>
-              <p>
-                Melon Sky Rocket adalah salah satu varietas melon hibrida unggulan yang sangat populer dan banyak dibudidayakan serta dikonsumsi di Indonesia.
-              </p>
-              <ul>
-                <li><i class="bi bi-flower3 flex-shrink-0"></i> Varietas hibrida manis dengan stabilitas tinggi</li>
-                <li><i class="bi bi-brightness-alt-high flex-shrink-0"></i> Toleransi baik pada panas dan kelembapan</li>
-                <li><i class="bi bi-hourglass-split flex-shrink-0"></i> Umur panen relatif cepat</li>
-              </ul>
-              <p></p>
-            </div>
-
-          </div>
-
-          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="200">
-            <img src="assets/img/skyrocket.png" class="img-fluid" alt="">
-          </div>
-
-        </div><!-- Features Item -->
-
-        <div class="row gy-2 justify-content-between features-item">
-
-          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-            <img src="assets/img/sunlady.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-5 d-flex align-items-center" data-aos="fade-left" data-aos-delay="200">
-            <div class="content">
-              <h3>Sun Lady</h3>
-              <p>
-                Melon Sun Lady adalah salah satu varietas melon hibrida unggulan yang berasal dari Taiwan. Melon ini dikenal karena daging buahnya yang berwarna jingga muda (oranye) dengan rasa yang sangat manis dan tekstur yang lembut (halus)
-              </p>
-              <ul>
-                <li><i class="bi bi-palette flex-shrink-0"></i> Kulit kuning cerah, daging putih krem</li>
-                <li><i class="bi bi-droplet-half flex-shrink-0"></i> Manis stabil 12–15° Brix</li>
-                <li><i class="bi bi-check-all flex-shrink-0"></i> Sangat cocok untuk greenhouse kecil</li>
-              </ul>
-              <p></p>
-            </div>
-          </div>
-
-        </div><!-- Features Item -->
-
-        <div class="row gy-2 justify-content-between features-item">
-
-          <div class="col-lg-5 d-flex align-items-center order-2 order-lg-1" data-aos="fade-right" data-aos-delay="100">
-
-            <div class="content">
-              <h3>Golden Aroma</h3>
-              <p>
-                Melon Golden Aroma adalah varietas melon hibrida F1 yang terkenal karena daging buahnya berwarna oranye yang manis dan harum, serta kulit berwarna hijau berjala rapat
-              </p>
-              <ul>
-                <li><i class="bi bi-palette flex-shrink-0"></i> Daging oranye kekuningan</li>
-                <li><i class="bi bi-wind flex-shrink-0"></i> Aroma kuat, manis pekat</li>
-                <li><i class="bi bi-patch-check flex-shrink-0"></i> Ukuran 1.5–2 kg</li>
-                <li><i class="bi bi-check-all flex-shrink-0"></i> Sangat populer untuk hidroponik karena stabil dan high-yield</li>
-              </ul>
-              <p></p>
+    
+        <div class="row gy-4 gx-5 justify-content-center">
+    
+          <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="100" id="skyrocket">
+            <div class="showcase-card">
+              <img src="assets/img/melon/skyrocket.png" class="showcase-bg" alt="Melon Sky Rocket">
               
+              <div class="showcase-content">
+                <div class="text-top">
+                  <h3>Melon</h3>
+                </div>
+                
+                <div class="text-bottom">
+                  <a href="melon.html" class="learn-more-link">PELAJARI LEBIH LANJUT</a>
+                </div>
+              </div>
             </div>
-
           </div>
-
-          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="200">
-            <img src="assets/img/goldenaroma.png" class="img-fluid" alt="">
+    
+          <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="200" id="sunlady">
+            <div class="showcase-card">
+              <img src="assets/img/stroberi.png" class="showcase-bg" alt="Melon Sun Lady" style="background: white;">
+              
+              <div class="showcase-content">
+                <div class="text-top">
+                  <h3>Stroberi</h3>
+                </div>
+                
+                <div class="text-bottom">
+                  <a href="stroberi.html" class="learn-more-link">PELAJARI LEBIH LANJUT</a>
+                </div>
+              </div>
+            </div>
           </div>
-
-        </div><!-- Features Item -->
-        <a href="#" class="btn more-btn mb-5" data-aos="fade-up" data-aos-delay="200">Load More</a>
+    
+          </div>
+    
+        
+    
       </div>
-
+    
     </section><!-- /Features Details Section -->
 
     <!-- More Features Section -->
-<section id="more-features" class="more-features section">
+    <section id="more-features" class="more-features section" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine"
+      data-aos-delay="100" data-aos-offset="0">
 
-  <div class="container">
+      <div class="container">
 
-    <div class="row justify-content-around gy-4">
+        <div class="row justify-content-around gy-4">
 
-      <div class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1" data-aos="fade-left"
-        data-aos-delay="100">
-        <h3>Keuntungan Dari Modular Farming</h3>
-        <p style="text-align: justify;">Sistem pertanian modern berbasis modul (unit produksi) yang dapat diatur, diperluas, dan dipindahkan sesuai kebutuhan. Teknologi ini memudahkan budidaya tanaman di berbagai lokasi, bahkan di area yang sebelumnya tidak cocok untuk bertani.</p>
+          <div class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1" data-aos="fade-left"
+            data-aos-delay="100">
+            <h3>Keuntungan Dari Modular Farming</h3>
+            <p style="text-align: justify;">Sistem pertanian modern berbasis modul (unit produksi) yang dapat diatur,
+              diperluas, dan dipindahkan sesuai kebutuhan. Teknologi ini memudahkan budidaya tanaman di berbagai lokasi,
+              bahkan di area yang sebelumnya tidak cocok untuk bertani.</p>
 
-        <div class="row">
+            <div class="row">
 
-          <div class="col-lg-6 icon-box d-flex">
-            <i class="bi bi-activity flex-shrink-0"></i>
-            <div>
-              <h4>Pemantauan Semi-Otomatis Melalui Teknologi Tinggi</h4>            
+              <div class="col-lg-6 icon-box d-flex">
+                <i class="bi bi-activity flex-shrink-0"></i>
+                <div>
+                  <h4>Pemantauan Semi-Otomatis Melalui Teknologi Tinggi</h4>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-lg-6 icon-box d-flex">
+                <i class="bi bi-award flex-shrink-0"></i>
+                <div>
+                  <h4>Produksi Sayuran Berkualitas Tinggi dan Konsisten</h4>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-lg-6 icon-box d-flex">
+                <i class="bi bi-droplet-half flex-shrink-0"></i>
+                <div>
+                  <h4>Hemat Air dan Nutrisi</h4>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-lg-6 icon-box d-flex">
+                <i class="bi bi-shield-check flex-shrink-0"></i>
+                <div>
+                  <h4>Panen Lebih Cepat, Minim Risiko Cuaca dan Hama</h4>
+                </div>
+              </div><!-- End Icon Box -->
+
             </div>
-          </div><!-- End Icon Box -->
 
-          <div class="col-lg-6 icon-box d-flex">
-            <i class="bi bi-award flex-shrink-0"></i>
-            <div>
-              <h4>Produksi Sayuran Berkualitas Tinggi dan Konsisten</h4>
-            </div>
-          </div><!-- End Icon Box -->
+          </div>
 
-          <div class="col-lg-6 icon-box d-flex">
-            <i class="bi bi-droplet-half flex-shrink-0"></i>
-            <div>
-              <h4>Hemat Air dan Nutrisi</h4>
-            </div>
-          </div><!-- End Icon Box -->
-
-          <div class="col-lg-6 icon-box d-flex">
-            <i class="bi bi-shield-check flex-shrink-0"></i>
-            <div>
-              <h4>Panen Lebih Cepat, Minim Risiko Cuaca dan Hama</h4>
-            </div>
-          </div><!-- End Icon Box -->
+          <div class="features-image col-lg-5 order-1 order-lg-2" data-aos="fade-right" data-aos-delay="200">
+            <img src="assets/img/tentangakar.png" alt="" class="img-fluid rounded-2">
+          </div>
 
         </div>
 
       </div>
 
-      <div class="features-image col-lg-5 order-1 order-lg-2" data-aos="fade-right" data-aos-delay="200">
-        <img src="assets/img/tentangakar.png" alt="" class="img-fluid rounded-2">
-      </div>
+    </section><!-- /More Features Section -->
 
-    </div>
+    <!-- SDG Features Section -->
+    <section id="sdg-features" class="sdg-features section mt-5" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine"
+      data-aos-delay="100" data-aos-offset="0">
 
-  </div>
-
-</section><!-- /More Features Section -->
-
-
-
-    <!-- Clients Section -->
-    <section id="clients" class="clients section">
-      
       <div class="container">
 
+        <div class="row justify-content-around gy-4">
+
+          <!-- IMAGE (Left) -->
+          <div class="features-image col-lg-5 order-1 order-lg-1" data-aos="fade-right" data-aos-delay="200">
+            <img src="assets/img/sustain.jpg" alt="" class="img-fluid rounded-2">
+          </div>
+
+          <!-- TEXT CONTENT (Right) -->
+          <div class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-2" data-aos="fade-left"
+            data-aos-delay="100">
+            <h3>Keberlanjutan</h3>
+            <p style="text-align: justify;">
+              Akar Farm berkomitmen untuk menciptakan masa depan pangan yang lebih berkelanjutan melalui teknologi
+              modular
+              farming.
+              Pendekatan ini mendukung berbagai tujuan pembangunan berkelanjutan (SDGs) dengan mengurangi limbah,
+              menekan jejak karbon,
+              dan mengoptimalkan produksi di kawasan perkotaan.
+            </p>
+
+            <div class="row">
+
+              <!-- SDG 11 -->
+              <div class="col-lg-12 icon-box d-flex mb-3">
+                <i class="bi bi-heart-pulse flex-shrink-0"></i>
+                <div>
+                  <h4>SDG 2 — Tanpa Kelaparan</h4>
+                </div>
+              </div>
+
+              <!-- SDG 12 -->
+              <div class="col-lg-12 icon-box d-flex mb-3">
+                <i class="bi bi-buildings flex-shrink-0"></i>
+                <div>
+                  <h4>SDG 11 — Kota & Permukiman Berkelanjutan</h4>
+                </div>
+              </div>
+
+              <!-- SDG 13 -->
+              <div class="col-lg-12 icon-box d-flex">
+                <i class="bi bi-cloud-sun flex-shrink-0"></i>
+                <div>
+                  <h4>SDG 13 — Penanganan Perubahan Iklim</h4>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    
+
+
+    <section id="instagram-feed" class="instagram-feed" data-aos="fade-up" data-aos-delay="200">
+      <div class="container-fluid p-0">
+        <div class="row g-0"> 
+          
+          <div class="col-6 col-lg-2">
+            <div class="insta-item" onclick="openInstaModal('video', 'assets/img/vidfeed1.mp4', 'Dengan bertani bersama AKAR<br><br>Kamu bakal dapetin pengalaman sekaligus kemudahan baru dalam era pertanian masa depan Indonesia.<br><br>Bayangin aja, kamu nggak perlu lagi menyiram dan memberi pupuk rutin untuk setiap tanaman yang ditanam.<br><br>Karena Unit AKAR memiliki sistem kinerja IoT dan lingkungan yang terkontrol.<br><br>Air dan nutrisi dialirkan ke seluruh unit dan lampu tanam (growth light) akan disesuaikan dengan jenis tanaman yang ditanam.<br><br>&quot;Tapi aku gak ngerti caranya?&quot;<br><br>Tenang, semua maintenance dan standar operasional akan di-cover oleh Agronom kami.<br><br>Kamu tinggal duduk manis dan menunggu panen laris manis.. 😉<br><br>Gimana? Gas bikin gak nih?')">
+              <img src="assets/img/thumbnailfeed1.jpg" alt="Insta 1" class="img-fluid">
+              <div class="insta-overlay">
+                <i class="bi bi-instagram"></i>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-6 col-lg-2">
+            <div class="insta-item" 
+                 onclick="openInstaModal('image', 
+                 'assets/img/feeds/feed1-1.webp, assets/img/feeds/feed1-2.webp, assets/img/feeds/feed1-3.webp, assets/img/feeds/feed1-4.webp, assets/img/feeds/feed1-5.webp, assets/img/feeds/feed1-6.webp, assets/img/feeds/feed1-7.webp', 
+                 'Melon Sun Lady yang segar! Geser untuk lihat varian lainnya ➡️')">
+                 
+              <img src="assets/img/feeds/feed1-1.webp" alt="Insta 2" class="img-fluid">
+              <div class="insta-overlay">
+                <i class="bi bi-instagram"></i> 
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-6 col-lg-2">
+            <div class="insta-item" onclick="openInstaModal('video', 'assets/img/vidfeed2.mp4', 'Golden Aroma dengan tekstur renyah dan manis yang pas.')">
+              <img src="assets/img/thumbnailfeed2.jpg" alt="Insta 3" class="img-fluid">
+              <div class="insta-overlay">
+                <i class="bi bi-instagram"></i>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-6 col-lg-2">
+            <div class="insta-item" 
+                 onclick="openInstaModal('image', 
+                 'assets/img/feeds/feed2-1.webp, assets/img/feeds/feed2-2.webp, assets/img/feeds/feed2-3.webp, assets/img/feeds/feed2-4.webp, assets/img/feeds/feed2-5.webp', 
+                 'Melon Sun Lady yang segar! Geser untuk lihat varian lainnya ➡️')">
+              <img src="assets/img/feeds/feed2-1.webp" alt="Insta 4" class="img-fluid">
+              <div class="insta-overlay">
+                <i class="bi bi-instagram"></i>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-6 col-lg-2">
+            <div class="insta-item" onclick="openInstaModal('video', 'assets/img/vidfeed3.mp4', 'Gift box spesial untuk orang tersayang. Dapatkan segera!')">
+              <img src="assets/img/thumbnailfeed3.jpg" alt="Insta 5" class="img-fluid">
+              <div class="insta-overlay">
+                <i class="bi bi-instagram"></i>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-6 col-lg-2">
+            <div class="insta-item" onclick="openInstaModal('image', 'assets/img/feeds/feed3.webp', 'Gift box spesial untuk orang tersayang. Dapatkan segera!')">
+              <img src="assets/img/feeds/feed3.webp" alt="Insta 6" class="img-fluid">
+              <div class="insta-overlay">
+                <i class="bi bi-instagram"></i>
+              </div>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </section>
+    
+    <div id="instaModal" class="custom-insta-modal">
+      <span class="close-insta-modal" onclick="closeInstaModal()">&times;</span>
+      
+      <div class="insta-modal-content">
+        
+        <div class="insta-media-col" id="instaMediaContainer">
+          </div>
+    
+        <div class="insta-info-col">
+          <div class="insta-header">
+            <img src="assets/img/favicon.png" class="profile-pic" alt="Profile">
+            <div class="profile-info">
+              <h5>Akar Farm</h5>
+              <span>@akar.farm</span>
+            </div>
+          </div>
+          
+          <div class="insta-caption">
+            <p id="instaCaptionText">Caption goes here...</p>
+          </div>
+    
+          <div class="insta-footer">
+            <a href="https://www.instagram.com/akar.farm/" class="follow-link">FOLLOW AKARFARM // INSTAGRAM</a>
+            <div class="social-icons">
+              <a href="https://www.instagram.com/akar.farm/" class="follow-link"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+
+    <section id="clients" class="clients section" data-aos="fade-up" data-aos-delay="200">
+
+      <div class="container">
+    
+        <div class="text-center mb-4" data-aos="fade-up">
+          <h5 class="partners-title">Awards</h5>
+          <div style="width: 50px; height: 3px; background: var(--accent-color); margin: 10px auto;"></div>
+        </div>
+    
         <div class="logo-carousel-wrapper">
     
           <div class="logo-carousel">
     
             <div class="logo-track">
-              <div class="logo-item"><img src="assets/img/clients/1.png"></div>
-              <div class="logo-item"><img src="assets/img/clients/2.png"></div>
-              <div class="logo-item"><img src="assets/img/clients/3.png"></div>
-              <div class="logo-item"><img src="assets/img/clients/4.png"></div>
-              <div class="logo-item"><img src="assets/img/clients/5.png"></div>
-              <div class="logo-item"><img src="assets/img/clients/6.png"></div>
-              <div class="logo-item"><img src="assets/img/clients/7.png"></div>
-              <div class="logo-item"><img src="assets/img/clients/8.png"></div>
-              <div class="logo-item"><img src="assets/img/clients/9.png"></div>
-              <div class="logo-item"><img src="assets/img/clients/10.png"></div>
-              <div class="logo-item"><img src="assets/img/clients/11.png"></div>
-              <div class="logo-item"><img src="assets/img/clients/12.png"></div>
+              <div class="logo-item"><img src="assets/img/wsa.png" alt="Awards 1"></div>
+              <div class="logo-item"><img src="assets/img/yunusyouth.png" alt="Awards 2"></div>
+              <div class="logo-item"><img src="assets/img/nextdev.png" alt="Awards 3"></div>
+              <div class="logo-item"><img src="assets/img/astranauts.png" alt="Awards 4"></div>
+              <div class="logo-item"><img src="assets/img/citypreneurs.png" alt="Awards 5"></div>
+              <div class="logo-item"><img src="assets/img/foodtech.png" alt="Awards 6"></div>
             </div>
     
-            <!-- Duplikasi agar tidak ada putus -->
             <div class="logo-track">
-              <div class="logo-item"><img src="assets/img/clients/1.png"></div>
-              <div class="logo-item"><img src="assets/img/clients/2.png"></div>
-              <div class="logo-item"><img src="assets/img/clients/3.png"></div>
-              <div class="logo-item"><img src="assets/img/clients/4.png"></div>
-              <div class="logo-item"><img src="assets/img/clients/5.png"></div>
-              <div class="logo-item"><img src="assets/img/clients/6.png"></div>
-              <div class="logo-item"><img src="assets/img/clients/7.png"></div>
-              <div class="logo-item"><img src="assets/img/clients/8.png"></div>
-              <div class="logo-item"><img src="assets/img/clients/9.png"></div>
-              <div class="logo-item"><img src="assets/img/clients/10.png"></div>
-              <div class="logo-item"><img src="assets/img/clients/11.png"></div>
-              <div class="logo-item"><img src="assets/img/clients/12.png"></div>
+              <div class="logo-item"><img src="assets/img/wsa.png" alt="Awards 1"></div>
+              <div class="logo-item"><img src="assets/img/yunusyouth.png" alt="Awards 2"></div>
+              <div class="logo-item"><img src="assets/img/nextdev.png" alt="Awards 3"></div>
+              <div class="logo-item"><img src="assets/img/astranauts.png" alt="Awards 4"></div>
+              <div class="logo-item"><img src="assets/img/citypreneurs.png" alt="Awards 5"></div>
+              <div class="logo-item"><img src="assets/img/foodtech.png" alt="Awards 6"></div>
             </div>
     
           </div>
@@ -356,7 +535,58 @@
       </div>
     
     </section>
+
+
+    <section id="clients" class="clients section" data-aos="fade-up" data-aos-delay="200">
+
+      <div class="container">
     
+        <div class="text-center mb-4" data-aos="fade-up">
+          <h5 class="partners-title">Dapatkan Produk Kami di:</h5>
+          <div style="width: 50px; height: 3px; background: var(--accent-color); margin: 10px auto;"></div>
+        </div>
+    
+        <div class="logo-carousel-wrapper">
+    
+          <div class="logo-carousel">
+    
+            <div class="logo-track">
+              <div class="logo-item"><img src="assets/img/clients/1.png" alt="Client 1"></div>
+              <div class="logo-item"><img src="assets/img/clients/2.png" alt="Client 2"></div>
+              <div class="logo-item"><img src="assets/img/clients/3.png" alt="Client 3"></div>
+              <div class="logo-item"><img src="assets/img/clients/4.png" alt="Client 4"></div>
+              <div class="logo-item"><img src="assets/img/clients/5.png" alt="Client 5"></div>
+              <div class="logo-item"><img src="assets/img/clients/6.png" alt="Client 6"></div>
+              <div class="logo-item"><img src="assets/img/clients/7.png" alt="Client 7"></div>
+              <div class="logo-item"><img src="assets/img/clients/8.png" alt="Client 8"></div>
+              <div class="logo-item"><img src="assets/img/clients/9.png" alt="Client 9"></div>
+              <div class="logo-item"><img src="assets/img/clients/10.png" alt="Client 10"></div>
+              <div class="logo-item"><img src="assets/img/clients/11.png" alt="Client 11"></div>
+              <div class="logo-item"><img src="assets/img/clients/12.png" alt="Client 12"></div>
+            </div>
+    
+            <div class="logo-track">
+              <div class="logo-item"><img src="assets/img/clients/1.png" alt="Client 1"></div>
+              <div class="logo-item"><img src="assets/img/clients/2.png" alt="Client 2"></div>
+              <div class="logo-item"><img src="assets/img/clients/3.png" alt="Client 3"></div>
+              <div class="logo-item"><img src="assets/img/clients/4.png" alt="Client 4"></div>
+              <div class="logo-item"><img src="assets/img/clients/5.png" alt="Client 5"></div>
+              <div class="logo-item"><img src="assets/img/clients/6.png" alt="Client 6"></div>
+              <div class="logo-item"><img src="assets/img/clients/7.png" alt="Client 7"></div>
+              <div class="logo-item"><img src="assets/img/clients/8.png" alt="Client 8"></div>
+              <div class="logo-item"><img src="assets/img/clients/9.png" alt="Client 9"></div>
+              <div class="logo-item"><img src="assets/img/clients/10.png" alt="Client 10"></div>
+              <div class="logo-item"><img src="assets/img/clients/11.png" alt="Client 11"></div>
+              <div class="logo-item"><img src="assets/img/clients/12.png" alt="Client 12"></div>
+            </div>
+    
+          </div>
+    
+        </div>
+      </div>
+    
+    </section>
+
 
 
   </main>
@@ -369,7 +599,7 @@
           <a href="index.html" class="logo d-flex align-items-center">
             <img src="assets/img/logo2.png" alt="">
           </a>
-          
+
           <div class="social-links d-flex mt-4">
             <a href=""><i class="bi bi-twitter-x"></i></a>
             <a href=""><i class="bi bi-facebook"></i></a>
@@ -379,21 +609,22 @@
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Company</h4>
+          <h4>Perusahaan</h4>
           <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Our Fruits</a></li>
-            <li><a href="#">Location</a></li>
-            <li><a href="#">Press Kit</a></li>
+            <li><a href="about.html">Tentang Kami</a></li>
+            <li><a href="#products">Buah Kami</a></li>
+            <li><a href="#products">Produk</a></li>
+            <li><a href="#map-section">Lokasi</a></li>
+            <li><a href="presskit.html">Kit Pers</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Support</h4>
+          <h4>Dukungan</h4>
           <ul>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Careers</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Kontak</a></li>
+            <li><a href="careers.html">Karir</a></li>
           </ul>
         </div>
 
@@ -401,30 +632,31 @@
           <form action="forms/newsletter.php" method="post" class="php-email-form">
             <div class="newsletter-form">
               <div class="d-inline-flex align-items-center mb-3">
-                <input type="email" class="form-control form-control-sm email-input"
-                    placeholder="info@akarfarm.com" />
-                <button class="btn btn-light mx-2">Get Started</button>
+                <input type="email" class="form-control form-control-sm email-input" placeholder="info@akarfarm.com" />
+                <button class="btn btn-light mx-1 me-1">Kirim</button>
               </div>
             </div>
           </form>
-        
-          <!-- WRAPPER BARU AGAR RATA KIRI KANAN -->
-          <div class="store-wrapper mt-3">
-            <img src="assets/img/appstore.png" alt="App Store" style="height:40px;">
-            <img src="assets/img/googleplay.png" alt="Google Play" style="height:40px;">
-          </div>
-        
-        </div>
-          </form>
-        </div>
 
+          <!-- WRAPPER BARU AGAR RATA KIRI KANAN -->
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-telegram"></i></a>
+            <a href="https://wa.me/6282280964418?text=Halo%20AkarFarm%2C%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20project%20ini."
+              target="_blank"><i class="bi bi-whatsapp"></i></a>
+          </div>
+
+        </div>
+        </form>
       </div>
+
+    </div>
     </div>
 
-    
+
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Akarfarm</strong><span>All Rights Reserved</span></p>
+      <p>2025 © <span>Hak Cipta</span> <strong class="px-1 sitename">Akarfarm</strong><span>Semua Hak Dilindungi
+          Undang-Undang</span></p>
     </div>
 
   </footer>
@@ -442,9 +674,77 @@
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <!-- GTRANSLATE SCRIPT -->
+  <script>
+    window.gtranslateSettings = {
+      "default_language": "id",
+      "languages": ["id", "en", "ko"],
+      "wrapper_selector": ".gtranslate_wrapper",
+      "switcher_horizontal_position": "inline",
+      "float_switcher_open_direction": "bottom"
+    }
+  </script>
+  <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+  <script>
+    // --- PERUBAHAN UTAMA ADA DI SINI ---
+    // Koordinat tengah Jawa kira-kira: Lat -7.3, Lng 110
+    // Zoom level 7 atau 8 pas untuk melihat satu pulau
+    var map = L.map('mapid').setView([-7.30, 110.00], 7); 
+
+    // Tile dasar (OpenStreetMap)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: '© Akarfarm'
+    }).addTo(map);
+
+    // ICON KUSTOM warna kuning
+    var yellowIcon = L.icon({
+      iconUrl: "assets/img/location.png",
+      iconSize: [28, 28],
+      iconAnchor: [14, 28],
+      popupAnchor: [0, -28]
+    });
+
+    // Marker lokasi (Data Anda)
+    const locations = [{
+        name: "Tangerang (BSD)",
+        lat: -6.3033,
+        lng: 106.6535
+      },
+      {
+        name: "Indramayu",
+        lat: -6.3275,
+        lng: 108.3229
+      },
+      {
+        name: "Yogyakarta",
+        lat: -7.7956,
+        lng: 110.3695
+      },
+      {
+        name: "Bogor (Klapanunggal)",
+        lat: -6.4667,
+        lng: 106.9500
+      },
+      {
+        name: "Bandung (Padalarang)",
+        lat: -6.8420,
+        lng: 107.4714
+      }
+    ];
+
+    locations.forEach(loc => {
+      L.marker([loc.lat, loc.lng], {
+          icon: yellowIcon
+        })
+        .addTo(map)
+    });
+</script>
 
 </body>
 

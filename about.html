@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Akar Farm</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: QuickStart
+  * Template URL: https://bootstrapmade.com/quickstart-bootstrap-startup-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+  
+      <nav id="navmenu" class="navmenu d-flex align-items-center">
+        <ul class="nav">
+          <li><a href="index.html">Beranda</a></li>
+  
+          <li class="dropdown nav-item">
+            <a href="#"><span>Buah Kami</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="melon.html" class="active">Melon</a></li>
+              <li><a href="stroberi.html">Stroberi</a></li>
+            </ul>
+          </li>
+  
+          <li class="dropdown nav-item">
+            <a href="#"><span>Pelajari</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="about.html">Tentang Kami</a></li>
+              <li><a href="sustain.html">Keberlanjutan</a></li>
+              <li><a href="presskit.html">Pers Kit</a></li>
+              <li><a href="careers.html">Karir</a></li>
+              <li><a href="blog.html">Blog</a></li>
+            </ul>
+          </li>
+  
+          <li class="d-xl-none mt-3 px-3 w-100">
+            <div class="d-flex flex-column gap-3 align-items-start">
+              <a class="btn-getstarted w-100 text-center" href="contact.html">Kontak Kami!</a>
+              <div class="gtranslate_wrapper"></div>
+            </div>
+          </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list ms-2"></i>
+      </nav>
+  
+      <a href="index.html" class="logo logo-center d-flex align-items-center" id="navbarLogo">
+        <img src="assets/img/logo2.png" alt="Logo">
+      </a>
+  
+      <div class="header-actions d-none d-xl-flex align-items-center gap-2">
+        <div class="gtranslate_wrapper mt-1"></div>
+        <a class="btn-getstarted" href="contact.html">Kontak Kami!</a>
+      </div>
+  
+    </div>
+  </header>
+
+
+
+
+    <main class="main">
+
+        <!-- Hero Section --> 
+        <section id="heroabout" class="hero-about-split section d-flex align-items-center" data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-sine" data-aos-delay="100" data-aos-offset="0">
+            <!-- BACKGROUND -->
+            <div class="container">
+                <div class="row align-items-center">
+
+                    <!-- LEFT TEXT -->
+                    <div class="col-lg-5">
+                        <h1 class="hero-about-title">
+                            Produk Segar<br>
+                            <span class="highlight-about">Tahan Lama</span>
+                        </h1>
+                    </div>
+
+                    <!-- RIGHT BULLET POINTS -->
+                    <div class="col-lg-6 offset-lg-1">
+
+                        <div class="hero-about-point d-flex">
+                            <svg width="150" height="150" viewBox="0 0 102 110" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M71.8559 53.119C69.7309 52.494 67.3559 52.494 65.1059 53.244L57.3559 55.744C57.2309 55.244 56.8559 54.619 56.2309 53.994C54.9809 52.619 52.9809 51.744 50.9809 51.744H44.3559C43.9809 51.744 43.4809 51.619 43.2309 51.369C38.3559 47.244 32.7309 49.119 31.1059 49.869C30.7309 49.994 30.3559 50.244 30.1059 50.494L22.4809 56.869C21.8559 56.244 20.9809 55.744 20.1059 55.619C18.9809 55.494 17.8559 55.744 16.8559 56.494L13.9809 58.619C12.1059 60.119 11.7309 62.744 13.1059 64.744L23.1059 77.994C23.8559 78.869 24.8559 79.494 25.9809 79.619C26.2309 79.619 26.3559 79.619 26.6059 79.619C27.4809 79.619 28.4809 79.369 29.2309 78.744L32.1059 76.619C33.6059 75.494 34.2309 73.369 33.4809 71.744L34.9809 70.619C35.3559 70.369 35.7309 70.244 36.1059 70.244L50.2309 69.994C52.7309 69.994 55.2309 69.244 57.4809 67.994L71.9809 59.619C72.7309 59.244 74.9809 57.744 74.7309 55.744C74.6059 54.494 73.6059 53.619 71.8559 53.119ZM30.4809 74.619L27.6059 76.744C27.2309 77.119 26.7309 77.244 26.3559 77.244C25.8559 77.119 25.4809 76.869 25.1059 76.494L15.1059 63.244C14.4809 62.494 14.6059 61.244 15.4809 60.619L18.3559 58.494C18.7309 58.244 19.1059 58.119 19.4809 58.119C19.6059 58.119 19.6059 58.119 19.7309 58.119C20.2309 58.244 20.6059 58.369 20.8559 58.744L27.8559 67.994L30.9809 71.994C31.4809 72.869 31.3559 74.119 30.4809 74.619ZM70.7309 57.369L56.2309 65.744C54.3559 66.744 52.3559 67.369 50.2309 67.369L35.9809 67.619C34.9809 67.619 34.1059 67.994 33.3559 68.494L32.1059 69.494L29.2309 65.744L23.9809 58.744L31.6059 52.369C31.7309 52.244 31.8559 52.244 31.9809 52.119C33.2309 51.619 37.7309 49.994 41.4809 53.244C42.2309 53.869 43.2309 54.244 44.2309 54.244H50.8559C52.2309 54.244 53.4809 54.744 54.3559 55.619C54.6059 55.994 54.9809 56.494 54.9809 56.869C54.9809 57.119 54.6059 57.869 52.6059 58.744H43.1059C42.3559 58.744 41.8559 59.244 41.8559 59.994C41.8559 60.744 42.3559 61.244 43.1059 61.244H53.2309L53.4809 61.119C55.3559 60.244 56.4809 59.369 57.1059 58.369L65.9809 55.619C67.7309 54.994 69.6059 54.994 71.2309 55.494C71.9809 55.744 72.2309 55.869 72.3559 55.994C72.1059 56.369 71.3559 56.994 70.7309 57.369Z"
+                                    fill="#16B364" />
+                                <path
+                                    d="M19.8552 61.1189L17.6052 62.744C17.1052 63.119 16.9802 63.9939 17.3552 64.4939C17.6052 64.8689 17.9802 64.9939 18.3552 64.9939C18.6052 64.9939 18.8552 64.8689 19.1052 64.7439L21.3552 63.1189C21.8552 62.7439 21.9802 61.8689 21.6052 61.3689C21.1052 60.7439 20.3552 60.6189 19.8552 61.1189Z"
+                                    fill="#16B364" />
+                                <path
+                                    d="M42.4801 30.994C44.6051 32.744 47.4801 33.119 49.8551 33.119C51.2301 33.119 52.6051 32.994 53.4801 32.744V40.494C48.8551 41.119 45.2301 44.744 45.2301 48.994V50.244H64.8551V48.994C64.8551 44.494 60.8551 40.869 55.8551 40.494V31.494C57.6051 32.244 60.3551 33.119 63.1051 33.119C64.3551 33.119 65.6051 32.994 66.7301 32.494C71.9801 30.369 73.7301 22.994 73.8551 22.619C73.9801 22.119 73.7301 21.619 73.3551 21.244C73.1051 21.119 66.6051 17.119 61.3551 19.244C58.6051 20.369 56.4801 22.994 55.2301 25.244C54.7301 23.244 53.6051 20.994 51.6051 19.494C46.9801 15.744 39.3551 17.869 38.9801 17.994C38.4801 18.119 38.1051 18.619 38.1051 19.119C38.1051 19.494 37.7301 27.369 42.4801 30.994ZM62.2301 47.869H47.8551C48.6051 45.119 51.4801 42.994 54.9801 42.994C58.6051 42.994 61.6051 45.119 62.2301 47.869ZM62.3551 21.744C65.4801 20.494 69.6051 22.244 71.2301 23.119C70.6051 24.994 68.9801 28.994 65.8551 30.369C63.3551 31.369 60.2301 30.619 57.9801 29.744L66.9801 26.244C67.4801 25.994 67.7301 25.619 67.7301 25.119C67.7301 24.994 67.7301 24.869 67.6051 24.619C67.3551 23.994 66.6051 23.619 65.9801 23.869L56.9801 27.369C58.1051 25.244 59.8551 22.744 62.3551 21.744ZM50.1051 21.369C52.3551 23.119 53.1051 26.369 53.3551 28.619L45.4801 22.369C44.9801 21.994 44.1051 21.994 43.7301 22.619C43.6051 22.869 43.4801 23.119 43.4801 23.369C43.4801 23.744 43.6051 24.119 43.9801 24.369L51.8551 30.619C49.6051 30.869 46.3551 30.869 44.1051 29.119C41.2301 26.869 40.8551 22.244 40.7301 20.244C42.6051 19.744 47.2301 19.119 50.1051 21.369Z"
+                                    fill="#16B364" />
+                                <path
+                                    d="M85.2676 25.6874C86.8933 24.3868 91.5105 21.7855 96.9731 21.7855M83.6418 15.6076C86.5682 11.9226 94.0467 3.90213 100.55 1.3009M73.8872 10.4052C75.4046 9.32134 78.6344 5.98311 79.4148 1.3009"
+                                    stroke="#FFC047" stroke-width="2.60122" stroke-linecap="round" />
+                                <path
+                                    d="M16.583 83.494C14.9573 84.7946 10.3401 87.3959 4.87752 87.3959M18.2088 93.5738C15.2824 97.2588 7.80389 105.279 1.30083 107.88M27.9634 98.7762C26.446 99.8601 23.2161 103.198 22.4358 107.88"
+                                    stroke="#FFC047" stroke-width="2.60122" stroke-linecap="round" />
+                            </svg>
+
+
+                            <p class="hero-about-desc">
+                                Menjadi Garda Terdepan Di Bidang Agrikultur Melalui Inovasi Dan Teknologi Untuk Kemajuan
+                                Urban Farming Nusantara
+                            </p>
+                        </div>
+
+                        <div class="hero-about-point d-flex">
+                            <svg width="150" height="150" viewBox="0 0 102 110" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_439_2551)">
+                                    <path
+                                        d="M46.6318 69.869V67.869C46.6318 66.244 46.0068 64.744 44.8818 63.494L32.0068 50.744C31.1318 49.869 30.1318 49.369 29.0068 49.119C28.3818 48.994 27.8818 48.994 27.3818 48.994V43.369C27.3818 41.244 26.2568 39.244 24.5068 38.369C23.5068 37.869 22.3818 37.744 21.5068 37.994C20.3818 38.369 19.3818 39.369 18.5068 40.869C18.3818 40.994 18.3818 41.244 18.3818 41.494V55.369C18.3818 56.869 19.0068 58.369 20.1318 59.494L31.0068 70.369C30.5068 70.869 30.2568 71.494 30.2568 72.244V76.994C30.2568 78.494 31.5068 79.744 33.0068 79.744H45.0068C46.5068 79.744 47.7568 78.494 47.7568 76.994V72.244C47.7568 71.244 47.3818 70.369 46.6318 69.869ZM20.8818 55.369V41.744C21.3818 40.994 21.7568 40.494 22.2568 40.369C22.3818 40.369 22.7568 40.244 23.3818 40.619C24.3818 41.119 25.0068 42.244 25.0068 43.494V50.619C24.6318 51.244 24.5068 51.869 24.5068 52.744C24.5068 54.494 25.2568 56.119 26.5068 57.494L31.3818 62.369C31.8818 62.869 32.6318 62.869 33.1318 62.369C33.6318 61.869 33.6318 61.119 33.1318 60.619L28.2568 55.744C27.3818 54.869 26.8818 53.869 27.0068 52.744C27.0068 52.244 27.1318 51.869 27.2568 51.744C27.5068 51.619 28.0068 51.619 28.5068 51.744C29.1318 51.869 29.7568 52.244 30.2568 52.744L43.0068 65.494C43.7568 66.244 44.1318 67.119 44.1318 68.119V69.619H33.6318L22.0068 57.869C21.2568 56.994 20.8818 56.244 20.8818 55.369ZM45.2568 76.994C45.2568 77.119 45.1318 77.244 45.0068 77.244H33.0068C32.8818 77.244 32.7568 77.119 32.7568 76.994V72.244C32.7568 72.119 32.8818 71.994 33.0068 71.994H44.8818C45.0068 71.994 45.1318 72.119 45.1318 72.244V76.994H45.2568Z"
+                                        fill="#16B364" />
+                                    <path
+                                        d="M80.7568 40.869C80.0068 39.244 79.0068 38.369 77.7568 37.994C76.7568 37.744 75.7568 37.869 74.7568 38.369C73.0068 39.369 71.8818 41.244 71.8818 43.369V48.994C71.3818 48.994 70.8818 48.994 70.2568 49.119C69.1318 49.369 68.1318 49.869 67.2568 50.744L54.5068 63.619C53.3818 64.744 52.7568 66.369 52.7568 67.994V69.994C52.0068 70.494 51.5068 71.369 51.5068 72.244V76.994C51.5068 78.494 52.7568 79.744 54.2568 79.744H66.2568C67.7568 79.744 69.0068 78.494 69.0068 76.994V72.244C69.0068 71.494 68.7568 70.869 68.2568 70.369L79.1318 59.494C80.2568 58.369 80.8818 56.869 80.8818 55.369V41.494C80.8818 41.244 80.8818 40.994 80.7568 40.869ZM66.5068 76.994C66.5068 77.119 66.3818 77.244 66.2568 77.244H54.2568C54.1318 77.244 54.0068 77.119 54.0068 76.994V72.244C54.0068 72.119 54.1318 71.994 54.2568 71.994H66.1318C66.2568 71.994 66.3818 72.119 66.3818 72.244V76.994H66.5068ZM78.3818 55.369C78.3818 56.244 78.0068 57.119 77.3818 57.744L65.7568 69.494H55.2568V67.994C55.2568 66.994 55.6318 66.119 56.3818 65.369L69.1318 52.619C69.6318 52.119 70.2568 51.744 70.8818 51.619C71.5068 51.494 72.0068 51.494 72.1318 51.619C72.2568 51.744 72.3818 52.119 72.3818 52.619C72.3818 53.619 71.8818 54.744 71.1318 55.619L66.2568 60.494C65.7568 60.994 65.7568 61.744 66.2568 62.244C66.7568 62.744 67.5068 62.744 68.0068 62.244L72.8818 57.369C74.2568 55.994 74.8818 54.369 74.8818 52.619C74.8818 51.744 74.6318 51.119 74.3818 50.494V43.369C74.3818 42.119 75.0068 40.994 76.0068 40.494C76.6318 40.119 77.0068 40.244 77.1318 40.244C77.6318 40.369 78.0068 40.869 78.5068 41.619V55.369H78.3818Z"
+                                        fill="#16B364" />
+                                    <path
+                                        d="M63.2568 34.994C63.5068 28.869 59.2568 22.994 50.3818 17.369C50.0068 17.119 49.5068 17.119 49.1318 17.369C48.6318 17.619 36.1318 24.869 36.1318 34.869C36.1318 40.619 40.2568 45.994 48.5068 50.869V54.744C48.5068 55.494 49.0068 55.994 49.7568 55.994C50.5068 55.994 51.0068 55.494 51.0068 54.744V50.994C53.5068 49.494 62.8818 43.619 63.2568 34.994ZM38.5068 34.994C38.5068 27.619 47.1318 21.619 49.6318 19.994C57.1318 24.869 60.8818 29.994 60.7568 34.994C60.5068 41.244 54.1318 46.119 50.8818 48.119V42.369L56.3818 38.619C57.0068 38.244 57.1318 37.494 56.7568 36.869C56.3818 36.244 55.6318 36.119 55.0068 36.494L50.8818 39.369V35.494L55.0068 32.869C55.6318 32.494 55.7568 31.744 55.3818 31.119C55.0068 30.494 54.2568 30.369 53.6318 30.744L50.8818 32.494V25.994C50.8818 25.244 50.3818 24.744 49.6318 24.744C48.8818 24.744 48.3818 25.244 48.3818 25.994V32.619L45.6318 30.869C45.0068 30.494 44.2568 30.619 43.8818 31.244C43.5068 31.869 43.6318 32.619 44.2568 32.994L48.3818 35.619V39.244L45.0068 36.619C44.5068 36.244 43.6318 36.369 43.2568 36.869C42.8818 37.369 43.0068 38.244 43.5068 38.619L48.3818 42.369V47.994C41.8818 43.869 38.5068 39.494 38.5068 34.994Z"
+                                        fill="#16B364" />
+                                </g>
+                                <path
+                                    d="M85.2676 25.6874C86.8933 24.3868 91.5105 21.7855 96.9731 21.7855M83.6418 15.6076C86.5682 11.9226 94.0467 3.90213 100.55 1.3009M73.8872 10.4052C75.4046 9.32134 78.6344 5.98311 79.4148 1.3009"
+                                    stroke="#FFC047" stroke-width="2.60122" stroke-linecap="round" />
+                                <path
+                                    d="M16.583 83.494C14.9573 84.7946 10.3401 87.3959 4.87752 87.3959M18.2088 93.5738C15.2824 97.2588 7.80389 105.279 1.30083 107.88M27.9634 98.7762C26.446 99.8601 23.2161 103.198 22.4358 107.88"
+                                    stroke="#FFC047" stroke-width="2.60122" stroke-linecap="round" />
+                                <defs>
+                                    <clipPath id="clip0_439_2551">
+                                        <rect width="70" height="70" fill="white"
+                                            transform="translate(14.6318 13.494)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                            <p class="hero-about-desc">
+                                Menciptakan Platform Yang Cocok Untuk Petani Di Indonesia Melalui Teknologi Pertanian
+                                Yang Dapat Dimanfaatkan Secara Komersial Di Seluruh Indonesia
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <!-- Updated About Section -->
+<section id="about" class="about section py-2 mb-5" style="background: color-mix(in srgb, var(--contrast-color), transparent 96%); border-radius: 20px;">
+    <div class="container">
+        <div class="row gy-4 align-items-center">
+
+            <!-- Image Section Full Left -->
+            <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
+                <div style="position: relative; border-radius: 20px; overflow: hidden;">
+                    <img src="assets/img/about.png" class="img-fluid w-100" alt="" style="border-radius: 20px;">
+                    <div style="position: absolute; bottom: 60px; left: 20px; background: var(--accent-color); color: var(--default-color); padding: 15px 20px; border-radius: 50px 10px; max-width: 420px; font-size: 18px; line-height: 1.4; text-align: center;">
+                        Sistem pertanian kami yang canggih memisahkan produksi pangan dari dampak negatif terhadap ekosistem.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cerita Kami Section -->
+<section id="cerita-kami" class="cerita-section py-2 mb-5" style="background: color-mix(in srgb, var(--contrast-color), transparent 96%); padding: 60px 0; border-radius: 20px;">
+
+    <div class="container">
+        <div class="row gy-4 align-items-center">
+
+            <!-- Text -->
+            <div class="col-lg-6" data-aos="fade-right"
+            data-aos-delay="100">
+
+                <div class="label-title">
+                    <span>Cerita Kami</span>
+                </div>
+
+                <p class="cerita-text mt-3">
+                    Kami memulai usaha pada tahun 2019 sebagai greenhouse hidroponik di Bandung bernama Blessings Farm.
+                    Saat ini kami tergabung di bawah PT Wize Indonesia Berkarya. Awal tahun ini, kami meningkatkan skala
+                    untuk membangun perangkat pertanian modular indoor vertical farming kami sendiri. Pelanggan
+                    sekarang dapat menanam, memanen, dan menikmati sayuran segar di mana saja & kapan saja!
+                </p>
+
+            </div>
+
+            <!-- Images -->
+            <div class="col-lg-6 d-flex gap-3 justify-content-center" data-aos="fade-left"
+            data-aos-delay="100">
+
+                <div class="image-left">
+                    <img src="assets/img/cerita1.png" alt="">
+                </div>
+
+                <div class="image-right">
+                    <img src="assets/img/cerita2.png" alt="">
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<section id="team" class="team-section py-5" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="container">
+
+        <h2 class="team-title text-center mb-5">Team Kami</h2>
+
+        <div class="team-wrapper d-flex align-items-center justify-content-center">
+
+            <div class="team-slider d-flex justify-content-center">
+
+                <div class="team-card">
+                    <img src="assets/img/team/farras.png" alt="">
+                    <h4>Muhammad Farras, B.Eng., B.Sc. (M.U.D)</h4>
+                    <p>Chief Executive Officer</p>
+                </div>
+
+                <div class="team-card">
+                    <img src="assets/img/team/bintang.png" alt="">
+                    <h4>Narendra Bintang, (B.Ec.) CSA</h4>
+                    <p>Chief Financial Officer</p>
+                </div>
+
+                <div class="team-card">
+                  <img src="assets/img/team/luke.png" alt="">
+                  <h4>Luke</h4>
+                  <p>Commissioner</p>
+              </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="investors" class="investors-section section" data-aos="fade-up" data-aos-delay="100">
+    <div class="container">
+        <h2 class="team-title text-center">Key Partners & Investors</h2>
+      <div class="row gy-4 justify-content-center align-items-center mb-4 mb-md-5">
+        
+        <div class="col-6 col-md-3 text-center" data-aos="fade-up" data-aos-delay="100">
+          <img src="assets/img/investors/antler.png" class="img-fluid investor-logo" alt="The New York Times">
+        </div>
+  
+        <div class="col-6 col-md-3 text-center" data-aos="fade-up" data-aos-delay="200">
+          <img src="assets/img/investors/indotech.png" class="img-fluid investor-logo" alt="Forbes">
+        </div>
+  
+        <div class="col-6 col-md-3 text-center" data-aos="fade-up" data-aos-delay="300">
+          <img src="assets/img/investors/brin.png" class="img-fluid investor-logo" alt="Fast Company">
+        </div>
+  
+        <div class="col-6 col-md-3 text-center" data-aos="fade-up" data-aos-delay="400">
+          <img src="assets/img/investors/endeavor.png" class="img-fluid investor-logo" alt="Variety">
+        </div>
+  
+      </div>
+  
+      <div class="row gy-4 justify-content-center align-items-center">
+  
+        
+  
+        <div class="col-6 col-md-3 text-center" data-aos="fade-up" data-aos-delay="200">
+          <img src="assets/img/investors/nthing.png" class="img-fluid investor-logo" alt="Goop">
+        </div>
+  
+        <div class="col-6 col-md-3 text-center" data-aos="fade-up" data-aos-delay="300">
+          <img src="assets/img/investors/angoventures.png" class="img-fluid investor-logo" alt="Investor 7">
+        </div>
+  
+        <div class="col-6 col-md-3 text-center" data-aos="fade-up" data-aos-delay="400">
+          <img src="assets/img/investors/gci.png" class="img-fluid investor-logo" alt="Investor 8">
+        </div>
+  
+      </div>
+  
+    </div>
+  </section>
+
+
+
+
+    </main>
+
+    <footer id="footer" class="footer position-relative">
+
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <img src="assets/img/logo2.png" alt="">
+            </a>
+  
+            <div class="social-links d-flex mt-4">
+              <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+  
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Perusahaan</h4>
+            <ul>
+              <li><a href="about.html">Tentang Kami</a></li>
+              <li><a href="index.html#products">Buah Kami</a></li>
+              <li><a href="index.html#products">Produk</a></li>
+              <li><a href="index.html#map-section">Lokasi</a></li>
+              <li><a href="presskit.html">Kit Pers</a></li>
+            </ul>
+          </div>
+  
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Dukungan</h4>
+            <ul>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Kontak</a></li>
+              <li><a href="careers.html">Karir</a></li>
+            </ul>
+          </div>
+  
+          <div class="col-lg-4 col-md-12 footer-newsletter">
+            <form action="forms/newsletter.php" method="post" class="php-email-form">
+              <div class="newsletter-form">
+                <div class="d-inline-flex align-items-center mb-3">
+                  <input type="email" class="form-control form-control-sm email-input" placeholder="info@akarfarm.com" />
+                  <button class="btn btn-light mx-1 me-1">Kirim</button>
+                </div>
+              </div>
+            </form>
+  
+            <!-- WRAPPER BARU AGAR RATA KIRI KANAN -->
+            <div class="social-links d-flex mt-4">
+              <a href=""><i class="bi bi-telegram"></i></a>
+              <a href="https://wa.me/6282280964418?text=Halo%20AkarFarm%2C%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20project%20ini."
+                target="_blank"><i class="bi bi-whatsapp"></i></a>
+            </div>
+  
+          </div>
+          </form>
+        </div>
+  
+      </div>
+      </div>
+  
+  
+  
+      <div class="container copyright text-center mt-4">
+        <p>2025 © <span>Hak Cipta</span> <strong class="px-1 sitename">Akarfarm</strong><span>Semua Hak Dilindungi
+            Undang-Undang</span></p>
+      </div>
+  
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <!-- GTRANSLATE SCRIPT -->
+    <script>
+        window.gtranslateSettings = {
+            "default_language": "id",
+            "languages": ["id", "en", "ko"],
+            "wrapper_selector": ".gtranslate_wrapper",
+            "switcher_horizontal_position": "inline",
+            "float_switcher_open_direction": "bottom"
+        }
+    </script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+    <script>
+        const slider = document.querySelector(".team-slider");
+        const btnPrev = document.querySelector(".prev-btn");
+        const btnNext = document.querySelector(".next-btn");
+    
+        btnNext.addEventListener("click", () => {
+            slider.scrollBy({ left: 200, behavior: "smooth" });
+        });
+    
+        btnPrev.addEventListener("click", () => {
+            slider.scrollBy({ left: -200, behavior: "smooth" });
+        });
+    </script>
+
+</body>
+
+</html>

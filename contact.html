@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Akar Farm</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="../assets/img/favicon.png" rel="icon">
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <!-- Main CSS File -->
+    <link href="../assets/css/main.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: QuickStart
+  * Template URL: https://bootstrapmade.com/quickstart-bootstrap-startup-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+  
+      <nav id="navmenu" class="navmenu d-flex align-items-center">
+        <ul class="nav">
+          <li><a href="../home">Beranda</a></li>
+  
+          <li class="dropdown nav-item">
+            <a href="#"><span>Buah Kami</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="../melon" class="active">Melon</a></li>
+              <li><a href="../stroberi/">Stroberi</a></li>
+            </ul>
+          </li>
+  
+          <li class="dropdown nav-item">
+            <a href="#"><span>Pelajari</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="../about">Tentang Kami</a></li>
+              <li><a href="../sustain">Keberlanjutan</a></li>
+              <li><a href="../presskit">Pers Kit</a></li>
+              <li><a href="../careers/">Karir</a></li>
+              <li><a href="../blog/">Blog</a></li>
+            </ul>
+          </li>
+  
+          <li class="d-xl-none mt-3 px-3 w-100">
+            <div class="d-flex flex-column gap-3 align-items-start">
+              <a class="btn-getstarted w-100 text-center" href="#">Kontak Kami!</a>
+              <div class="gtranslate_wrapper"></div>
+            </div>
+          </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list ms-2"></i>
+      </nav>
+  
+      <a href="../home/" class="logo logo-center d-flex align-items-center" id="navbarLogo">
+        <img src="../assets/img/logo2.png" alt="Logo">
+      </a>
+  
+      <div class="header-actions d-none d-xl-flex align-items-center gap-2">
+        <div class="gtranslate_wrapper mt-1"></div>
+        <a class="btn-getstarted" href="#">Kontak Kami!</a>
+      </div>
+  
+    </div>
+  </header>
+
+
+
+
+    <main class="main">
+
+        <section class="contact-us-section section">
+            <div class="container">
+                <div class="contact-header text-center mb-3" data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-sine" data-aos-delay="100" data-aos-offset="0">
+                    <div class="title-wrapper position-relative d-inline-block">
+                        <h2 class="section-title">Hubungi Kami</h2>
+                        <svg class="yellow-squiggle" width="50" height="40" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 28C2 28 8 2 18 2C28 2 25 22 38 6" stroke="#FDB94E" stroke-width="4" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <p class="subtitle text-muted">
+                        Kami di sini untuk Anda. Bagaimana kami bisa membantu bisnis Anda tumbuh?
+                    </p>
+                </div>
+        
+                <div class="row g-5 align-items-center" >
+                    
+                    <div class="col-lg-7" data-aos="fade-right" data-aos-delay="300">
+                        <div class="contact-form-card">
+                            <h4 class="form-title mb-4">Kirim Pesan</h4>
+                            <form action="#">
+                                <div class="row mb-3">
+                                    <div class="col-md-6 mb-3 mb-md-0">
+                                        <div class="form-group">
+                                            <label class="form-label">Nama Depan</label>
+                                            <input type="text" class="form-control custom-input" placeholder="Nama Depan">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label">Nama Belakang</label>
+                                            <input type="text" class="form-control custom-input" placeholder="Nama Belakang">
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="row mb-3">
+                                    <div class="col-md-6 mb-3 mb-md-0">
+                                        <div class="form-group">
+                                            <label class="form-label">Email</label>
+                                            <input type="email" class="form-control custom-input" placeholder="nama@email.com">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label">Nomor Telepon</label>
+                                            <input type="tel" class="form-control custom-input" placeholder="08123xxxxxxx">
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="row mb-3">
+                                    <div class="col-md-6 mb-3 mb-md-0">
+                                        <div class="form-group">
+                                            <label class="form-label">Perusahaan</label>
+                                            <input type="text" class="form-control custom-input" placeholder="Nama Perusahaan">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label">Kota</label>
+                                            <input type="text" class="form-control custom-input" placeholder="Kota">
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="form-group mb-3">
+                                    <label class="form-label">Tujuan Menghubungi</label>
+                                    <div class="select-wrapper">
+                                        <select class="form-control custom-input custom-select">
+                                            <option value="" disabled selected>Pilih salah satu...</option>
+                                            <option value="partnership">Kemitraan Strategis</option>
+                                            <option value="support">Bantuan Teknis</option>
+                                            <option value="sales">Informasi Penjualan</option>
+                                        </select>
+                                    </div>
+                                </div>
+        
+                                <div class="form-group mb-4">
+                                    <label class="form-label">Pesan Anda</label>
+                                    <textarea class="form-control custom-input" rows="4" placeholder="Tuliskan detail pesan Anda di sini..."></textarea>
+                                </div>
+        
+                                <button type="submit" class="btn btn-kirim w-100">Kirim Pesan Sekarang</button>
+                            </form>
+                        </div>
+                    </div>
+        
+                    <div class="col-lg-5 ps-lg-5" data-aos="fade-left" data-aos-delay="300">
+                        <div class="contact-info-wrapper">
+                            
+                            <div class="info-item d-flex align-items-start mb-4">
+                                <div class="icon-box">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                </div>
+                                <div class="text-box ms-3">
+                                    <h5 class="fw-bold">Kunjungi Kami</h5>
+                                    <p class="text-muted mb-0">Melawai, Kby. Baru, Kota Jakarta Selatan,<br>DKI Jakarta 12160</p>
+                                </div>
+                            </div>
+        
+                            <div class="info-item d-flex align-items-start mb-4">
+                                <div class="icon-box">
+                                    <i class="bi bi-telephone-fill"></i>
+                                </div>
+                                <div class="text-box ms-3">
+                                    <h5 class="fw-bold">Layanan Pelanggan</h5>
+                                    <p class="mb-0">Akar Customer Care</p>
+                                    <a href="tel:0217818163" class="contact-link">021-78181-63</a>
+                                </div>
+                            </div>
+        
+                            <div class="info-item d-flex align-items-start">
+                                <div class="icon-box">
+                                    <i class="bi bi-envelope-fill"></i>
+                                </div>
+                                <div class="text-box ms-3">
+                                    <h5 class="fw-bold">Email & Kemitraan</h5>
+                                    <p class="mb-0">Punya pertanyaan?</p>
+                                    <a href="mailto:info@akar.com" class="contact-link">info@akar.com</a>
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer id="footer" class="footer position-relative">
+
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <img src="assets/img/logo2.png" alt="">
+            </a>
+  
+            <div class="social-links d-flex mt-4">
+              <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+  
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Perusahaan</h4>
+            <ul>
+              <li><a href="about.html">Tentang Kami</a></li>
+              <li><a href="index.html#products">Buah Kami</a></li>
+              <li><a href="index.html#products">Produk</a></li>
+              <li><a href="index.html#map-section">Lokasi</a></li>
+              <li><a href="presskit.html">Kit Pers</a></li>
+            </ul>
+          </div>
+  
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Dukungan</h4>
+            <ul>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Kontak</a></li>
+              <li><a href="careers.html">Karir</a></li>
+            </ul>
+          </div>
+  
+          <div class="col-lg-4 col-md-12 footer-newsletter">
+            <form action="forms/newsletter.php" method="post" class="php-email-form">
+              <div class="newsletter-form">
+                <div class="d-inline-flex align-items-center mb-3">
+                  <input type="email" class="form-control form-control-sm email-input" placeholder="info@akarfarm.com" />
+                  <button class="btn btn-light mx-1 me-1">Kirim</button>
+                </div>
+              </div>
+            </form>
+  
+            <!-- WRAPPER BARU AGAR RATA KIRI KANAN -->
+            <div class="social-links d-flex mt-4">
+              <a href=""><i class="bi bi-telegram"></i></a>
+              <a href="https://wa.me/6282280964418?text=Halo%20AkarFarm%2C%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20project%20ini."
+                target="_blank"><i class="bi bi-whatsapp"></i></a>
+            </div>
+  
+          </div>
+          </form>
+        </div>
+  
+      </div>
+      </div>
+  
+  
+  
+      <div class="container copyright text-center mt-4">
+        <p>2025 © <span>Hak Cipta</span> <strong class="px-1 sitename">Akarfarm</strong><span>Semua Hak Dilindungi
+            Undang-Undang</span></p>
+      </div>
+  
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <!-- GTRANSLATE SCRIPT -->
+    <script>
+        window.gtranslateSettings = {
+            "default_language": "id",
+            "languages": ["id", "en", "ko"],
+            "wrapper_selector": ".gtranslate_wrapper",
+            "switcher_horizontal_position": "inline",
+            "float_switcher_open_direction": "bottom"
+        }
+    </script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+
+</body>
+
+</html>

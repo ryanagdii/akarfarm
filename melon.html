@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Akar Farm</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: QuickStart
+  * Template URL: https://bootstrapmade.com/quickstart-bootstrap-startup-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+  
+      <nav id="navmenu" class="navmenu d-flex align-items-center">
+        <ul class="nav">
+          <li><a href="index.html">Beranda</a></li>
+  
+          <li class="dropdown nav-item">
+            <a href="#"><span>Buah Kami</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="melon.html" class="active">Melon</a></li>
+              <li><a href="stroberi.html">Stroberi</a></li>
+            </ul>
+          </li>
+  
+          <li class="dropdown nav-item">
+            <a href="#"><span>Pelajari</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="about.html">Tentang Kami</a></li>
+              <li><a href="sustain.html">Keberlanjutan</a></li>
+              <li><a href="presskit.html">Pers Kit</a></li>
+              <li><a href="careers.html">Karir</a></li>
+              <li><a href="blog.html">Blog</a></li>
+            </ul>
+          </li>
+  
+          <li class="d-xl-none mt-3 px-3 w-100">
+            <div class="d-flex flex-column gap-3 align-items-start">
+              <a class="btn-getstarted w-100 text-center" href="contact.html">Kontak Kami!</a>
+              <div class="gtranslate_wrapper"></div>
+            </div>
+          </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list ms-2"></i>
+      </nav>
+  
+      <a href="index.html" class="logo logo-center d-flex align-items-center" id="navbarLogo">
+        <img src="assets/img/logo2.png" alt="Logo">
+      </a>
+  
+      <div class="header-actions d-none d-xl-flex align-items-center gap-2">
+        <div class="gtranslate_wrapper mt-1"></div>
+        <a class="btn-getstarted" href="contact.html">Kontak Kami!</a>
+      </div>
+  
+    </div>
+  </header>
+
+
+
+
+    <main class="main">
+
+        <section class="product-showcase-section" data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-sine" data-aos-delay="100" data-aos-offset="0">
+            <div class="container">
+                
+                <div id="productCarousel" class="carousel slide custom-carousel" data-bs-ride="false">
+                    
+                    <div class="carousel-inner">
+                        
+                        <div class="carousel-item active">
+                            <div class="row g-0 carousel-card">
+                                <div class="col-lg-6 image-side">
+                                    <img src="assets/img/melon/sunlady.png" alt="Baby Kale Product">
+                                </div>
+                                <div class="col-lg-6 text-side">
+                                    <div class="text-content">
+                                        <h2>Sun Lady</h2>
+                                        <h4 class="subtitle">Manis stabil untuk greenhouse skala kecil</h4>
+                                        <p>
+                                          Cantik dengan kulit kuning cerah dan daging putih krem yang lembut. Sangat pas untuk greenhouse kecil dengan tingkat kemanisan stabil di angka 12–15° Brix.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="carousel-item">
+                            <div class="row g-0 carousel-card">
+                                <div class="col-lg-6 image-side"> <img src="assets/img/melon/goldenaroma.png" alt="Produk Lain">
+                                </div>
+                                <div class="col-lg-6 text-side">
+                                    <div class="text-content">
+                                        <h2>Golden Aroma</h2>
+                                        <h4 class="subtitle">Aroma memikat dengan hasil panen melimpah</h4>
+                                        <p>
+                                          Favorit petani hidroponik karena karakternya yang stabil dan produktif. Daging buahnya berwarna oranye kekuningan dengan aroma kuat serta rasa manis yang pekat.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="carousel-item">
+                            <div class="row g-0 carousel-card">
+                                <div class="col-lg-6 image-side">
+                                     <img src="assets/img/melon/skyrocket.png" alt="Produk 3">
+                                </div>
+                                <div class="col-lg-6 text-side">
+                                    <div class="text-content">
+                                        <h2>Sky Rocket / Sky Blue</h2>
+                                        <h4 class="subtitle">Varietas tangguh dengan masa panen cepat</h4>
+                                        <p>
+                                          Jenis hibrida yang tahan cuaca panas serta memiliki masa panen relatif cepat. Rasanya manis stabil dengan toleransi tinggi terhadap kelembapan lingkungan.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <div class="row g-0 carousel-card">
+                                <div class="col-lg-6 image-side">
+                                     <img src="assets/img/melon/goldenhami.png" alt="Produk 3">
+                                </div>
+                                <div class="col-lg-6 text-side">
+                                    <div class="text-content">
+                                        <h2>Golden Hami</h2>
+                                        <h4 class="subtitle">Tekstur renyah dan tahan simpan lebih lama</h4>
+                                        <p>
+                                          Pilihan tepat untuk siklus tanam konsisten dengan kulit kuning cerah yang menarik. Keunggulan utamanya adalah daya simpan lama serta daging buah yang renyah dan manis.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <div class="row g-0 carousel-card">
+                                <div class="col-lg-6 image-side">
+                                     <img src="assets/img/melon/rockmelon.png" alt="Produk 3">
+                                </div>
+                                <div class="col-lg-6 text-side">
+                                    <div class="text-content">
+                                        <h2>Rock Melon (Cantaloupe)</h2>
+                                        <h4 class="subtitle">Si manis premium dengan kulit berjaring</h4>
+                                        <p>
+                                          Primadona pasar premium yang dikenal dengan kulit berjaring dan kadar gula tinggi. Varietas berdaging oranye ini tumbuh sangat stabil pada media cocopeat.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <div class="row g-0 carousel-card">
+                                <div class="col-lg-6 image-side">
+                                     <img src="assets/img/melon/honeydew.png" alt="Produk 3">
+                                </div>
+                                <div class="col-lg-6 text-side">
+                                    <div class="text-content">
+                                        <h2>Honeydew (Hijau / Putih)</h2>
+                                        <h4 class="subtitle">Kelembutan juicy dalam ukuran besar</h4>
+                                        <p>
+                                          Menawarkan sensasi rasa lembut dan sangat berair dengan daging berwarna hijau muda. Ukuran buahnya besar mencapai 2–3 kg, namun butuh kontrol kelembaban yang teliti.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <div class="row g-0 carousel-card">
+                                <div class="col-lg-6 image-side">
+                                     <img src="assets/img/melon/alisha.png" alt="Produk 3">
+                                </div>
+                                <div class="col-lg-6 text-side">
+                                    <div class="text-content">
+                                        <h2>Alisha / Alisa</h2>
+                                        <h4 class="subtitle">Kualitas premium Jepang yang bernilai tinggi</h4>
+                                        <p>
+                                          Varietas asal Jepang ini memiliki tekstur sangat renyah dan manis. Sering digunakan pada proyek skala besar karena nilai jualnya yang premium.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <div class="row g-0 carousel-card">
+                                <div class="col-lg-6 image-side">
+                                     <img src="assets/img/melon/glamour.png" alt="Produk 3">
+                                </div>
+                                <div class="col-lg-6 text-side">
+                                    <div class="text-content">
+                                        <h2>Glamour Melon</h2>
+                                        <h4 class="subtitle">Warna oranye cerah dengan kadar manis tinggi</h4>
+                                        <p>
+                                          Tampil memikat dengan daging oranye cerah dan rasa yang sangat manis. Performa tumbuhnya sangat andal untuk lahan komersial maupun demplot.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <div class="row g-0 carousel-card">
+                                <div class="col-lg-6 image-side">
+                                     <img src="assets/img/melon/sakata.png" alt="Produk 3">
+                                </div>
+                                <div class="col-lg-6 text-side">
+                                    <div class="text-content">
+                                        <h2>Melon Sakata (Seri Jepang)</h2>
+                                        <h4 class="subtitle">Pilihan eksklusif untuk pasar kelas atas</h4>
+                                        <p>
+                                          Dirancang khusus untuk memenuhi standar pasar high-end dengan kualitas buah prima. Sangat cocok diterapkan pada sistem irigasi tetes dan tahan penyakit akar.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <div class="row g-0 carousel-card">
+                                <div class="col-lg-6 image-side">
+                                     <img src="assets/img/melon/sweetbasil.png" alt="Produk 3">
+                                </div>
+                                <div class="col-lg-6 text-side">
+                                    <div class="text-content">
+                                        <h2>Sweet Basil (Melon Korea)</h2>
+                                        <h4 class="subtitle">Aroma kuat khas Korea yang renyah</h4>
+                                        <p>
+                                          Sangat digemari pasar Korea dan Asia karena aromanya yang kuat dan khas. Daging buahnya berwarna putih kehijauan dengan tekstur crunchy saat disantap.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-custom-icon">
+                            <i class="bi bi-arrow-left"></i>
+                        </span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                        <span class="carousel-control-custom-icon">
+                            <i class="bi bi-arrow-right"></i>
+                        </span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    
+                </div>
+        
+            </div>
+        </section>
+
+
+
+
+
+        <section class="perbedaan-section" data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-sine" data-aos-delay="100" data-aos-offset="0">
+            <div class="decorative-circle"></div>
+        
+            <div class="container">
+                <div class="row align-items-center">
+                    
+                    <div class="col-lg-5 text-column">
+                        <h2 class="section-title" data-aos="fade-down" data-aos-delay="300">
+                            <span class="highlight-bg">Perbedaan</span><br>
+                            Produk Akar
+                        </h2>
+                        <p class="section-desc" data-aos="fade-up" data-aos-delay="400">
+                            Produk Akar memiliki rasa, tekstur dan kualitas yang menghasilkan hidangan lezat dan berkualitas.
+                        </p>
+                    </div>
+        
+                    <div class="col-lg-7">
+                        <div class="products-row">
+                            
+                            <div class="product-item" data-aos="fade-down" data-aos-delay="300">
+                                <img src="assets/img/melon/alisha2.png" alt="Sayur 1">
+                            </div>
+        
+                            <div class="product-item" data-aos="fade-down" data-aos-delay="400">
+                                <img src="assets/img/melon/skyrocket.png" alt="Sayur 2">
+                            </div>
+        
+                            <div class="product-item" data-aos="fade-down" data-aos-delay="500">
+                                <img src="assets/img/melon/goldenaroma.png" alt="Sayur 3">
+                            </div>
+        
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </section>
+
+        <section class="buahsec-container mb-5" data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-sine" data-aos-delay="100" data-aos-offset="0">
+            <div class="buahsec-image">
+                <div class="buahsec-caption">
+                    <p>Produk Digemari Seluruh Kalangan,<br> 
+                    Termasuk Koki Pemenang Penghargaan<br> 
+                    Hingga Koki Rumahan.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="quality-section" data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-sine" data-aos-delay="100" data-aos-offset="0">
+            <div class="container">
+                
+                <div class="display-wrapper">
+                    <img id="mainImage" src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?q=80&w=1000&auto=format&fit=crop" alt="Quality Image" class="main-image fade-anim">
+                    
+                    <div class="overlay-box">
+                        <h2 id="overlayTitle">Memiliki Kualitas Konsisten Sepanjang Tahun</h2>
+                    </div>
+                </div>
+    
+                <div class="controls-row">
+                    
+                    <div class="control-item active" onclick="changeSlideBuah(0)">
+                        <div class="progress-bar"></div>
+                        <p class="control-text">
+                            Hasil panen terbaik tanpa bergantung cuaca ketika Anda menanam di dalam ruangan. 
+                            Kontrol kondisi tanaman dan pastikan sendiri pertumbuhan tanaman.
+                        </p>
+                    </div>
+    
+                    <div class="control-item" onclick="changeSlideBuah(1)">
+                        <div class="progress-bar"></div>
+                        <p class="control-text">
+                            Panen dalam ruangan kami dirancang untuk menghasilkan 350X hasil panen per acre 
+                            jika dibandingkan dengan pertanian konvensional.
+                        </p>
+                    </div>
+    
+                    <div class="control-item" onclick="changeSlideBuah(2)">
+                        <div class="progress-bar"></div>
+                        <p class="control-text">
+                            Kami dapat menanam hasil yang sama dengan pertanian konvensional hanya dalam 
+                            1% dari area lahan yang biasanya dibutuhkan.
+                        </p>
+                    </div>
+    
+                </div>
+    
+            </div>
+        </section>
+
+        
+    
+
+
+
+
+
+    </main>
+
+    <footer id="footer" class="footer position-relative">
+
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <img src="assets/img/logo2.png" alt="">
+            </a>
+  
+            <div class="social-links d-flex mt-4">
+              <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+  
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Perusahaan</h4>
+            <ul>
+              <li><a href="about.html">Tentang Kami</a></li>
+              <li><a href="index.html#products">Buah Kami</a></li>
+              <li><a href="index.html#products">Produk</a></li>
+              <li><a href="index.html#map-section">Lokasi</a></li>
+              <li><a href="presskit.html">Kit Pers</a></li>
+            </ul>
+          </div>
+  
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Dukungan</h4>
+            <ul>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Kontak</a></li>
+              <li><a href="careers.html">Karir</a></li>
+            </ul>
+          </div>
+  
+          <div class="col-lg-4 col-md-12 footer-newsletter">
+            <form action="forms/newsletter.php" method="post" class="php-email-form">
+              <div class="newsletter-form">
+                <div class="d-inline-flex align-items-center mb-3">
+                  <input type="email" class="form-control form-control-sm email-input" placeholder="info@akarfarm.com" />
+                  <button class="btn btn-light mx-1 me-1">Kirim</button>
+                </div>
+              </div>
+            </form>
+  
+            <!-- WRAPPER BARU AGAR RATA KIRI KANAN -->
+            <div class="social-links d-flex mt-4">
+              <a href=""><i class="bi bi-telegram"></i></a>
+              <a href="https://wa.me/6282280964418?text=Halo%20AkarFarm%2C%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20project%20ini."
+                target="_blank"><i class="bi bi-whatsapp"></i></a>
+            </div>
+  
+          </div>
+          </form>
+        </div>
+  
+      </div>
+      </div>
+  
+  
+  
+      <div class="container copyright text-center mt-4">
+        <p>2025 © <span>Hak Cipta</span> <strong class="px-1 sitename">Akarfarm</strong><span>Semua Hak Dilindungi
+            Undang-Undang</span></p>
+      </div>
+  
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <!-- GTRANSLATE SCRIPT -->
+    <script>
+        window.gtranslateSettings = {
+            "default_language": "id",
+            "languages": ["id", "en", "ko"],
+            "wrapper_selector": ".gtranslate_wrapper",
+            "switcher_horizontal_position": "inline",
+            "float_switcher_open_direction": "bottom"
+        }
+    </script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+
+</body>
+
+</html>
